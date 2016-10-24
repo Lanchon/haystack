@@ -209,4 +209,15 @@ Install it and reboot:
 
 `$ adb reboot`
 
-Upon reboot, launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Allow signature spoofing" (the last option), and enable it. Go back to the checker app... Profit!
+Upon reboot, launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Allow signature spoofing" (the last option), and enable it...
+
+
+!['Allow signature spoofing' dialog]
+(https://github.com/Lanchon/haystack/raw/master/screenshots/settings-warning.png)
+
+
+Now go back to the checker app and profit!
+
+
+!['Signature Spoofing Checker' app]
+(https://github.com/Lanchon/haystack/raw/master/screenshots/checker-enabled.png)
