@@ -1,0 +1,140 @@
+#!/bin/bash
+
+set -e
+
+source "$(dirname "$(readlink -f "$0")")/.global"
+
+mkdir -p "$patches_dex_dir"
+rm -rf "$patches_dex_dir"/*
+
+build_one() {
+
+    local patch_name="$1"
+    local fileset_dirs=( "${@:2}" )
+
+    echo "********* BUILD: $patch_name"
+    echo
+
+    local patch_tmp_dir="$tmp_dir/$patch_name"
+    mkdir "$patch_tmp_dir"
+
+    local patch_dex_dirs=()
+    for fileset_dir in "${fileset_dirs[@]}"; do
+
+        local fileset_name="$(basename "$fileset_dir")"
+
+        echo "****** build: $patch_name"
+        echo "****** against: $fileset_name"
+        echo
+
+        local patch_source_dir="$patches_source_dir/$patch_name"
+        local api_level="$(cut -d '-' -f 1 <<<"$fileset_name")"
+        local patch_dex_dir="$patch_tmp_dir/${patch_name}__$fileset_name"
+        patch_dex_dirs+=( "$patch_dex_dir" )
+
+        "$base_dir/build-patch" "$patch_source_dir" "$api_level" "$fileset_dir" "$patch_dex_dir"
+
+        echo
+
+    done
+
+    echo "********* PUBLISH: $patch_name"
+    echo "********* BUILT AGAINST: $(basename "${fileset_dirs[0]}")"
+
+    cp -r "${patch_dex_dirs[0]}" "$patches_dex_dir/$patch_name"
+
+    echo
+    echo
+
+}
+
+apply_one() {
+
+    local patch_name="$1"
+    local fileset_dirs=( "${@:2}" )
+
+    echo "********* APPLY: $patch_name"
+    echo
+
+    local patch_tmp_dir="$tmp_dir/$patch_name"
+    local fileset_tmp_dir="$tmp_dir/${patch_name}__fs"
+    mkdir "$fileset_tmp_dir"
+
+    #patched_fileset_dirs=()
+    for fileset_dir in "${fileset_dirs[@]}"; do
+
+        local fileset_name="$(basename "$fileset_dir")"
+
+        echo "****** apply: $patch_name"
+        echo "****** to: $fileset_name"
+        echo
+
+        local patch_dex_dir="$patch_tmp_dir/${patch_name}__$fileset_name"
+        local api_level="$(cut -d '-' -f 1 <<<"$fileset_name")"
+        local patched_fileset_dir="$fileset_tmp_dir/${fileset_name}__$patch_name"
+        #patched_fileset_dirs+=( "$patched_fileset_dir" )
+
+        "$base_dir/patch-fileset" "$patch_dex_dir" "$api_level" "$fileset_dir" "$patched_fileset_dir"
+
+        if [ -d "$fileset_dir/dedex" ]; then
+            ln -s -t "$patched_fileset_dir" "$fileset_dir/dedex"
+        fi
+
+        if [ -d "$fileset_dir/dedex-auto" ]; then
+            ln -s -t "$patched_fileset_dir" "$fileset_dir/dedex-auto"
+        fi
+
+        echo
+
+    done
+
+    echo
+
+}
+
+build_and_apply_one() {
+
+    build_one "$@"
+    apply_one "$@"
+
+}
+
+build_all() {
+
+    shopt -s nullglob
+
+    tmp_dir="$patches_dex_dir/tmp.\$\$\$"
+    mkdir "$tmp_dir"
+    echo "*" >"$tmp_dir/.gitignore"
+
+    local ALL=( "$filesets_dir"/* )
+
+    local  GB=( "$filesets_dir"/{09,10}-* )
+    local ICS=( "$filesets_dir"/1[4-5]-* )
+    local  JB=( "$filesets_dir"/1[6-8]-* )
+    local  KK=( "$filesets_dir"/19-* )
+    local  LP=( "$filesets_dir"/2[1-2]-* )
+    local  MM=( "$filesets_dir"/23-* )
+    local   N=( "$filesets_dir"/24-* )
+
+    # Build the hook patches
+
+    build_and_apply_one sigspoof-hook-1.5-2.3 "${GB[@]}"
+    build_and_apply_one sigspoof-hook-4.0 "${ICS[@]}"
+    build_and_apply_one sigspoof-hook-4.1-6.0 "${JB[@]}" "${KK[@]}" "${LP[@]}" "${MM[@]}"
+    build_and_apply_one sigspoof-hook-7.0 "${N[@]}"
+
+    # Build the core patch
+
+    build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0}__fs/*
+
+    # Build the UI patches
+
+    build_one sigspoof-ui-global-4.1-6.0 "$tmp_dir"/sigspoof-core__fs/{1[6-9],2[1-3]}-*
+    build_one sigspoof-ui-global-7.0 "$tmp_dir"/sigspoof-core__fs/24-*
+
+    rm -rf "$tmp_dir"
+
+}
+
+build_all "$@" 2>&1 | tee "$patches_dex_dir/bulk-patch-builder.log"

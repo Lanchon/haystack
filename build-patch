@@ -1,0 +1,93 @@
+#!/bin/bash
+
+set -e
+
+base_suffix=.
+source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
+
+if [ "$3" == "" ]; then
+    usage "build-patch <patch-source-dir> <fileset-api-level> <fileset-dir> [ <target-dir-to-create> [ <java-version> ] ]"
+fi
+
+patch_source_dir="${1%/}"
+api_level="$2"
+fileset_dir="${3%/}"
+patch_build_dir="${4%/}"
+java_version="${5:-$default_java_version}"
+
+check_dir "$patch_source_dir"
+check_fileset "$fileset_dir"
+
+if [ "$patch_build_dir" == "" ]; then
+    patch_build_dir="$(basename "$patch_source_dir")-dex"
+fi
+
+echo ">>> target directory: $patch_build_dir"
+mkdir "$patch_build_dir"
+
+tmp_dir="$patch_build_dir/tmp"
+mkdir "$tmp_dir"
+
+### dedex fileset
+
+dedex_dir="$fileset_dir/dedex"
+if [ ! -d "$dedex_dir" ]; then
+    dedex_dir="$fileset_dir/dedex-auto"
+    if [ ! -d "$dedex_dir" ]; then
+        echo ">>> dedex fileset"
+        dedex_dir="$tmp_dir/dedex"
+        "$base_dir/dedex-fileset" "$fileset_dir" "$dedex_dir"
+    fi
+fi
+
+### build patch parts
+
+parts_dir="$tmp_dir/parts"
+mkdir "$parts_dir"
+
+bootclasspath=( "$dedex_dir"/{core{,-libart,-oj},ext,framework{,2}}.jar.dedex.jar )
+
+build_patch_part() {
+
+    local name="$1"
+
+    echo ">>> build patch: $name"
+
+    local source_dir="$patch_source_dir/$name"
+
+    classpath=( "$dedex_dir/${name}.dedex.jar" "$dexpatcher_annotation_jar" )
+
+    local part_dir="$parts_dir/$name"
+    mkdir "$part_dir"
+
+    #local classes_dir="$part_dir/classes"
+    #mkdir "$classes_dir"
+    local classes_dir="$part_dir"
+
+    run_javac \
+        -bootclasspath "$(join_with_char ':' "${bootclasspath[@]}")" \
+        -classpath "$(join_with_char ':' "${classpath[@]}")" \
+        -source "$java_version" -target "$java_version" \
+        -d "$classes_dir" \
+        "$source_dir"/*.java
+
+    patch_dex="$patch_build_dir/${name}.dex"
+
+    run_dx --dex --output "$patch_dex" "$dexpatcher_annotation_jar" "$classes_dir"
+
+}
+
+for part in "$patch_source_dir"/*; do
+    build_patch_part "$(basename "$part")"
+done
+
+rm -rf "$tmp_dir"
+
+### apply patch (dry-run)
+
+echo
+echo "*** apply fileset patch (dry-run)"
+
+"$base_dir/patch-fileset" "$patch_build_dir" "$api_level" "$fileset_dir" --dry-run
+
+echo "*** build-patch: success"

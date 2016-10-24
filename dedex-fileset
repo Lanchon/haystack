@@ -1,0 +1,44 @@
+#!/bin/bash
+
+set -e
+
+base_suffix=.
+source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
+
+if [ "$1" == "" ]; then
+    usage "dedex-fileset <fileset-dir> [ <target-dir-to-create> ]"
+fi
+
+fileset_dir="${1%/}"
+dedex_dir="${2%/}"
+
+check_fileset "$fileset_dir"
+
+if [ "$dedex_dir" == "" ]; then
+
+    if [ -d "$fileset_dir/dedex" ]; then
+        echo ">>> skip dedex to 'dedex-auto' ('dedex' exists)"
+        exit
+    fi
+
+    if [ -f "$fileset_dir/.no-dedex-auto" ]; then
+        echo ">>> skip dedex to 'dedex-auto' ('.no-dedex-auto' exists)"
+        exit
+    fi
+
+    dedex_dir="$fileset_dir/dedex-auto"
+    echo ">>> target directory: $dedex_dir"
+    rm -rf "$dedex_dir"
+    mkdir "$dedex_dir"
+    echo "*" >"$dedex_dir/.gitignore"
+
+else
+
+    echo ">>> target directory: $dedex_dir"
+    mkdir "$dedex_dir"
+
+fi
+
+for file in "$fileset_dir"/*.{jar,apk}; do
+    run_d2j_dex2jar -nc -o "$dedex_dir/$(basename "$file").dedex.jar" "$file"
+done

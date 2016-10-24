@@ -1,0 +1,135 @@
+#!/bin/bash
+
+set -e
+
+base_suffix=.
+source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
+
+dry_run_option="--dry-run"
+
+if [ "$3" == "" ]; then
+    usage "patch-fileset <patch-dex-dir> <fileset-api-level> <fileset-dir> [ <target-dir-to-create> | $dry_run_option [ <dexpatcher-option> ... ] ]"
+fi
+
+patch_dex_dir="${1%/}"
+api_level="$2"
+fileset_dir="${3%/}"
+patched_filterset_dir="${4%/}"
+global_dexpatcher_options=( "${@:5}" )
+
+check_dir "$patch_dex_dir"
+check_fileset "$fileset_dir"
+
+if [ "$patched_filterset_dir" != "$dry_run_option" ]; then
+    wet_run=true
+else
+    wet_run=false
+fi
+
+if $wet_run; then
+
+    if [ "$patched_filterset_dir" == "" ]; then
+        patched_filterset_dir="$(basename "$fileset_dir")__$(basename "$patch_dex_dir")"
+    fi
+
+    echo ">>> target directory: $patched_filterset_dir"
+    mkdir "$patched_filterset_dir"
+
+    cp -t "$patched_filterset_dir" "$fileset_dir"/*.{jar,apk}
+
+    tmp_dir="$patched_filterset_dir/tmp"
+    mkdir "$tmp_dir"
+
+    #parts_dir="$tmp_dir/parts"
+    #mkdir "$parts_dir"
+    parts_dir="$tmp_dir"
+
+fi
+
+### apply patch parts
+
+apply_patch_part() {
+
+    local name="$1"
+
+    echo ">>> apply patch: $name"
+
+    local dexpatcher_options=( "${global_dexpatcher_options[@]}" --api-level "$api_level" --verbose )
+
+    if $wet_run; then
+
+        local part_dir="$parts_dir/$name"
+        mkdir "$part_dir"
+
+        local patched_dex_dir="$part_dir/patched-dex"
+        mkdir "$patched_dex_dir"
+
+        dexpatcher_options+=( --output "$patched_dex_dir" )
+
+    else
+
+        dexpatcher_options+=( --dry-run )
+
+    fi
+
+    if [ "$name" == "core.jar" ] || [ "$name" == "core-libart.jar" ]; then
+        error "patching core jars not yet supported by these scripts"
+    fi
+
+    if [ "$name" == "framework.jar" ] && [ -f "$fileset_dir/framework2.jar" ]; then
+
+        echo ">>> pre-lollipop multi-dex detected"
+
+        # TODO: Check that 'framework3.jar' does not exist.
+
+        # Force the creation of a minimum of 2 dex files.
+        dexpatcher_options+=( --multi-dex-jobs 2 )
+        run_dexpatcher "${dexpatcher_options[@]}" "$fileset_dir/$name" "$fileset_dir/framework2.jar" "$patch_dex_dir/${name}.dex"
+
+        if $wet_run; then
+
+            # TODO: Check that 'classes3.dex' does not exist.
+
+            echo ">>> repack: framework.jar"
+            zip -d "$patched_filterset_dir/framework.jar" 'classes*.dex'
+            zip -j "$patched_filterset_dir/framework.jar" "$patched_dex_dir/classes.dex"
+
+            echo ">>> repack: framework2.jar"
+            zip -d "$patched_filterset_dir/framework2.jar" 'classes*.dex'
+            mv "$patched_dex_dir/classes.dex" "$patched_dex_dir/classes.dex.bak"
+            mv "$patched_dex_dir/classes2.dex" "$patched_dex_dir/classes.dex"
+            zip -j "$patched_filterset_dir/framework2.jar" "$patched_dex_dir/classes.dex"
+            mv "$patched_dex_dir/classes.dex" "$patched_dex_dir/classes2.dex"
+            mv "$patched_dex_dir/classes.dex.bak" "$patched_dex_dir/classes.dex"
+
+        fi
+
+    else
+
+        if (( "$api_level" >= 21 )); then
+            dexpatcher_options+=( --multi-dex )
+        fi
+        run_dexpatcher "${dexpatcher_options[@]}" "$fileset_dir/$name" "$patch_dex_dir/${name}.dex"
+
+        if $wet_run; then
+
+            echo ">>> repack: $name"
+            zip -d "$patched_filterset_dir/$name" 'classes*.dex'
+            zip -j "$patched_filterset_dir/$name" "$patched_dex_dir"/classes*.dex
+
+        fi
+
+    fi
+
+}
+
+for part in "$patch_dex_dir"/*.dex; do
+    apply_patch_part "$(basename "${part%.dex}")"
+done
+
+if $wet_run; then
+    rm -rf "$tmp_dir"
+fi
+
+echo
+echo "*** patch-fileset: success"

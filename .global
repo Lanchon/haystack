@@ -1,0 +1,99 @@
+#!/bin/bash
+
+base_dir="$(dirname "$(readlink -f "$0")")/$base_suffix"
+base_dir="${base_dir%/}"
+
+default_java_version="1.5"
+
+### Filesets
+
+fs_framework_jars=( ext.jar services.jar )
+fs_priv_apps=( Settings.apk )
+fs_non_priv_apps=()
+
+### Paths
+
+android_build_tools_dir=~/"android/sdk/build-tools/17.0.0"
+
+dexpatcher_dir="$base_dir/dexpatcher"
+dexpatcher_jar=( "$dexpatcher_dir"/dexpatcher-[0-9]*.jar )
+dexpatcher_annotation_jar=( "$dexpatcher_dir"/dexpatcher-annotation-*.jar )
+
+### Tools
+
+run_adb_quiet() {
+    adb "${adb_options[@]}" "$@"
+}
+
+run_adb() {
+    echo ">>>" adb "${adb_options[@]}" "$@"
+    run_adb_quiet "$@"
+}
+
+run_java() {
+    java "$@"
+}
+
+run_javac() {
+    #echo ">>>" javac "$@"
+    javac "$@"
+}
+
+run_d2j_dex2jar() {
+    #echo ">>>" d2j-dex2jar "$@"
+    d2j-dex2jar "$@"
+}
+
+run_dx() {
+    #echo ">>>" dx "$@"
+    "$android_build_tools_dir/dx" "$@"
+}
+
+run_dexpatcher() {
+    echo ">>>" dexpatcher "$@"
+    run_java -jar "$dexpatcher_jar" "$@"
+}
+
+### Helpers
+
+error() {
+    >&2 echo "error: $*"
+    exit 1
+}
+
+usage() {
+    >&2 echo "usage: $*"
+    exit 1
+}
+
+check_adb() {
+    run_adb_quiet shell exit
+}
+
+check_dir() {
+    local dir="${1%/}"
+    local message="${2:-"directory not found"}"
+    if [ ! -d "$dir" ]; then
+        error "$message"
+    fi
+}
+
+check_file() {
+    local file="$1"
+    local message="${2:-"file not found"}"
+    if [ ! -f "$file" ]; then
+        error "$message"
+    fi
+}
+
+check_fileset() {
+    local fileset_dir="${1%/}"
+    local message="${2:-"fileset not found"}"
+    check_file "$fileset_dir/framework.jar" "$message"
+}
+
+join_with_char() {
+    local IFS="$1"
+    shift
+    echo "$*"
+}

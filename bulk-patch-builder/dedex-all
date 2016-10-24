@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+source "$(dirname "$(readlink -f "$0")")/.global"
+
+for fileset_dir in "$filesets_dir"/*; do
+    echo ">>> dedex fileset: $(basename "$fileset_dir")"
+    "$base_dir/dedex-fileset" "$fileset_dir"
+    echo
+done
+
+echo "*** dedex-all: success"

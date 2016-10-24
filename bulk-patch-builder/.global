@@ -1,0 +1,13 @@
+#!/bin/bash
+
+base_suffix=..
+source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
+
+builder_base_dir="$(dirname "$(readlink -f "$0")")"
+builder_base_dir="${builder_base_dir%/}"
+
+### Paths
+
+patches_source_dir="$base_dir/patches-src"
+patches_dex_dir="$base_dir/patches"
+filesets_dir="$builder_base_dir/filesets"

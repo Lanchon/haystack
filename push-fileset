@@ -1,0 +1,45 @@
+#!/bin/bash
+
+set -e
+
+base_suffix=.
+source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
+
+if [ "$1" == "" ]; then
+    usage "push-fileset <fileset-dir> [ <adb-option> ... ]"
+fi
+
+fileset_dir="${1%/}"
+adb_options=( "${@:2}" )
+
+check_fileset "$fileset_dir"
+check_adb
+
+run_adb root || true
+#run_adb wait-for-device
+run_adb remount || true
+
+run_adb push "$fileset_dir/framework.jar" "/system/framework/"
+if [ -f "$fileset_dir/framework2.jar" ]; then
+    run_adb push "$fileset_dir/framework2.jar" "/system/framework/"
+fi
+
+# TODO: Support the two versions of core jars that KK devices have.
+
+for file in "${fs_framework_jars[@]}"; do
+    run_adb push "$fileset_dir/$file" "/system/framework/"
+done
+
+for file in "${fs_priv_apps[@]}"; do
+    run_adb push "$fileset_dir/$file" "/system/priv-app/${file%.apk}/" ||
+        run_adb push "$fileset_dir/$file" "/system/priv-app/" ||
+        run_adb push "$fileset_dir/$file" "/system/app/"
+done
+
+for file in "${fs_non_priv_apps[@]}"; do
+    run_adb push "$fileset_dir/$file" "/system/app/${file%.apk}/" ||
+        run_adb push "$fileset_dir/$file" "/system/app/"
+done
+
+echo
+echo "*** push-fileset: success"

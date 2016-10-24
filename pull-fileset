@@ -1,0 +1,46 @@
+#!/bin/bash
+
+set -e
+
+base_suffix=.
+source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
+
+if [ "$1" == "" ]; then
+    usage "pull-fileset <target-dir-to-create> [ <adb-option> ... ]"
+fi
+
+fileset_dir="${1%/}"
+adb_options=( "${@:2}" )
+
+check_adb
+
+echo ">>> target directory: $fileset_dir"
+mkdir "$fileset_dir"
+
+run_adb pull "/system/framework/framework.jar" "$fileset_dir/"
+run_adb pull "/system/framework/framework2.jar" "$fileset_dir/" || true
+
+# TODO: Support the two versions of core jars that KK devices have.
+
+run_adb pull "/system/framework/core.jar" "$fileset_dir/" ||
+    run_adb pull "/system/framework/core-libart.jar" "$fileset_dir/"
+
+run_adb pull "/system/framework/core-oj.jar" "$fileset_dir/" || true
+
+for file in "${fs_framework_jars[@]}"; do
+    run_adb pull "/system/framework/$file" "$fileset_dir/"
+done
+
+for file in "${fs_priv_apps[@]}"; do
+    run_adb pull "/system/priv-app/${file%.apk}/$file" "$fileset_dir/" ||
+        run_adb pull "/system/priv-app/$file" "$fileset_dir/" ||
+        run_adb pull "/system/app/$file" "$fileset_dir/"
+done
+
+for file in "${fs_non_priv_apps[@]}"; do
+    run_adb pull "/system/app/${file%.apk}/$file" "$fileset_dir/" ||
+        run_adb pull "/system/app/$file" "$fileset_dir/"
+done
+
+echo
+echo "*** pull-fileset: success"
