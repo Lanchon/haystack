@@ -199,7 +199,7 @@ remount succeeded
 *** push-fileset: success
 ```
 
-Ok! Now lets download my signature spoofing checker app to verify that spoofing works:
+Ok! Now lets download my [signature spoofing checker] (https://github.com/Lanchon/sigspoof-checker) app to verify that spoofing works:
 
 `$ wget 'https://github.com/Lanchon/sigspoof-checker/releases/download/v1.0/Lanchon-SigSpoof-Checker-1.0.apk'`
 
