@@ -1,9 +1,12 @@
 # Haystack
 ## Signature Spoofing Patcher for Android
 
-This is replacement for [Needle] (https://github.com/moosd/Needle) (and its fork [Tingle] (https://github.com/ale5000-git/tingle)) based on the thoroughly awesome and completely ignored [DexPatcher] (https://dexpatcher.github.io/)(*) instead of [smali] (https://github.com/JesusFreke/smali).
+This is replacement for [Needle] (https://github.com/moosd/Needle) (and its fork [Tingle] (https://github.com/ale5000-git/tingle)) based on the thoroughly awesome and completely ignored [DexPatcher] (https://dexpatcher.github.io/)(*) instead of [smali] (https://github.com/JesusFreke/smali). (See also: [Signature Spoofing Checker] (https://github.com/Lanchon/sigspoof-checker).)
 
 (*) My lawyers insisted that I disclose that I am the author of DexPatcher here.
+
+!['Allow signature spoofing' dialog] (https://github.com/Lanchon/haystack/raw/master/screenshots/settings-warning-small.png)
+!['Signature Spoofing Checker' app] (https://github.com/Lanchon/haystack/raw/master/screenshots/checker-enabled-small.png)
 
 ### What is wrong with Needle?
 
@@ -210,6 +213,3 @@ Install it and reboot:
 `$ adb reboot`
 
 Upon reboot, launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Allow signature spoofing" (the last option), enable it, go back to the checker app... And profit!
-
-!['Allow signature spoofing' dialog] (https://github.com/Lanchon/haystack/raw/master/screenshots/settings-warning-small.png)
-!['Signature Spoofing Checker' app] (https://github.com/Lanchon/haystack/raw/master/screenshots/checker-enabled-small.png)
