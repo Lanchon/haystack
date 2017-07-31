@@ -115,23 +115,23 @@ build_all() {
     local  KK=( "$filesets_dir"/19-* )
     local  LP=( "$filesets_dir"/2[1-2]-* )
     local  MM=( "$filesets_dir"/23-* )
-    local   N=( "$filesets_dir"/24-* )
+    local   N=( "$filesets_dir"/2[4-5]-* )
 
     # Build the hook patches
 
     build_and_apply_one sigspoof-hook-1.5-2.3 "${GB[@]}"
     build_and_apply_one sigspoof-hook-4.0 "${ICS[@]}"
     build_and_apply_one sigspoof-hook-4.1-6.0 "${JB[@]}" "${KK[@]}" "${LP[@]}" "${MM[@]}"
-    build_and_apply_one sigspoof-hook-7.0 "${N[@]}"
+    build_and_apply_one sigspoof-hook-7.0-7.1 "${N[@]}"
 
     # Build the core patch
 
-    build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0}__fs/*
+    build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-7.1}__fs/*
 
     # Build the UI patches
 
     build_one sigspoof-ui-global-4.1-6.0 "$tmp_dir"/sigspoof-core__fs/{1[6-9],2[1-3]}-*
-    build_one sigspoof-ui-global-7.0 "$tmp_dir"/sigspoof-core__fs/24-*
+    build_one sigspoof-ui-global-7.0-7.1 "$tmp_dir"/sigspoof-core__fs/2[4-5]-*
 
     rm -rf "$tmp_dir"
 

@@ -44,7 +44,7 @@ Requirements:
 
 Because of feature creep, Haystack is not as simple as the patch linked above. It is broken up in layers to avoid code duplication and to give you choices of what to apply.
 
-- Hooks (required): these are simple adapters to hook all versions of Android from 1.5 Cupcake to 7.0 Nougat. (See [patch](https://github.com/Lanchon/haystack/tree/master/patches-src/sigspoof-hook-4.1-6.0/services.jar).)
+- Hooks (required): these are simple adapters to hook all versions of Android from 1.5 Cupcake to 7.1 Nougat. (See [patch](https://github.com/Lanchon/haystack/tree/master/patches-src/sigspoof-hook-4.1-6.0/services.jar).)
 - Core (required): this is the main code of the patch that spoofs signatures based on metadata in the application manifest. Other cores that obtain fake signatures from different sources might follow up later; the need to modify an app's manifest to spoof its signature is not ideal in some situations. (See [patch](https://github.com/Lanchon/haystack/blob/master/patches-src/sigspoof-core/services.jar/GeneratePackageInfoHook.java).)
 - UI (optional): these patches add a global signature spoofing enable/disable switch to the application section in developer settings. Other UIs could be implemented in the future, such as a per-app setting using Android 6.0's runtime permissions, or a per-app setting for all semi-recent CyanogenMod roms using their Privacy Guard framework. (See [services.jar](https://github.com/Lanchon/haystack/blob/master/patches-src/sigspoof-ui-global-4.1-6.0/services.jar/GeneratePackageInfoHook.java) and [Settings.apk](https://github.com/Lanchon/haystack/blob/master/patches-src/sigspoof-ui-global-4.1-6.0/Settings.apk/DevelopmentSettings.java) patches.)
 
@@ -106,8 +106,9 @@ sigspoof-core
 sigspoof-hook-1.5-2.3
 sigspoof-hook-4.0
 sigspoof-hook-4.1-6.0
-sigspoof-hook-7.0
+sigspoof-hook-7.0-7.1
 sigspoof-ui-global-4.1-6.0
+sigspoof-ui-global-7.0-7.1
 ```
 
 `$ ./patch-fileset`

@@ -322,40 +322,73 @@ deleting: classes.dex
 *** patch-fileset: success
 
 
-********* BUILD: sigspoof-hook-7.0
+********* BUILD: sigspoof-hook-7.0-7.1
 
-****** build: sigspoof-hook-7.0
+****** build: sigspoof-hook-7.0-7.1
 ****** against: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0/sigspoof-hook-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk
 >>> build patch: services.jar
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0/sigspoof-hook-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0/sigspoof-hook-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-********* PUBLISH: sigspoof-hook-7.0
+****** build: sigspoof-hook-7.0-7.1
+****** against: 25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed
+
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed
+>>> build patch: services.jar
+
+*** apply fileset patch (dry-run)
+>>> apply patch: services.jar
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex'
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+
+*** patch-fileset: success
+*** build-patch: success
+
+********* PUBLISH: sigspoof-hook-7.0-7.1
 ********* BUILT AGAINST: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk
 
 
-********* APPLY: sigspoof-hook-7.0
+********* APPLY: sigspoof-hook-7.0-7.1
 
-****** apply: sigspoof-hook-7.0
+****** apply: sigspoof-hook-7.0-7.1
 ****** to: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0/sigspoof-hook-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
+>>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0/sigspoof-hook-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex'
-info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/tmp/services.jar/patched-dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex'
+info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex'
+0 error(s), 0 warning(s)
+>>> repack: services.jar
+deleting: classes.dex
+  adding: classes.dex (deflated 55%)
+
+*** patch-fileset: success
+
+****** apply: sigspoof-hook-7.0-7.1
+****** to: 25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed
+
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1
+>>> apply patch: services.jar
+>>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex'
+info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
@@ -520,16 +553,33 @@ info: dry run due to '--dry-run' option
 *** build-patch: success
 
 ****** build: sigspoof-core
-****** against: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0
+****** against: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1
 >>> build patch: services.jar
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar.dex
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar.dex'
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex'
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+
+*** patch-fileset: success
+*** build-patch: success
+
+****** build: sigspoof-core
+****** against: 25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1
+
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1
+>>> build patch: services.jar
+
+*** apply fileset patch (dry-run)
+>>> apply patch: services.jar
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
@@ -687,14 +737,30 @@ deleting: classes.dex
 *** patch-fileset: success
 
 ****** apply: sigspoof-core
-****** to: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0
+****** to: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar.dex
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0/services.jar.dex'
-info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/tmp/services.jar/patched-dex'
+>>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex'
+info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex'
+0 error(s), 0 warning(s)
+>>> repack: services.jar
+deleting: classes.dex
+  adding: classes.dex (deflated 55%)
+
+*** patch-fileset: success
+
+****** apply: sigspoof-core
+****** to: 25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1
+
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core
+>>> apply patch: services.jar
+>>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex'
+info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
@@ -877,33 +943,57 @@ info: dry run due to '--dry-run' option
 ********* BUILT AGAINST: 16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core
 
 
-********* BUILD: sigspoof-ui-global-7.0
+********* BUILD: sigspoof-ui-global-7.0-7.1
 
-****** build: sigspoof-ui-global-7.0
-****** against: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core
+****** build: sigspoof-ui-global-7.0-7.1
+****** against: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0/sigspoof-ui-global-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0/sigspoof-ui-global-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/services.jar.dex
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0/sigspoof-ui-global-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/services.jar.dex'
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0/sigspoof-ui-global-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/Settings.apk.dex
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0/sigspoof-ui-global-7.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core/Settings.apk.dex'
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-********* PUBLISH: sigspoof-ui-global-7.0
-********* BUILT AGAINST: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0__sigspoof-core
+****** build: sigspoof-ui-global-7.0-7.1
+****** against: 25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core
+
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core
+>>> build patch: services.jar
+>>> build patch: Settings.apk
+
+*** apply fileset patch (dry-run)
+>>> apply patch: services.jar
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex'
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+>>> apply patch: Settings.apk
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex'
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+
+*** patch-fileset: success
+*** build-patch: success
+
+********* PUBLISH: sigspoof-ui-global-7.0-7.1
+********* BUILT AGAINST: 24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core
 
 
