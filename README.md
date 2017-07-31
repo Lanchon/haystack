@@ -66,8 +66,6 @@ And finally there are script to bulk-build all patches:
 
 The resulting log of the bulk-build process can be found [here](https://github.com/Lanchon/haystack/blob/master/patches/bulk-patch-builder.log). 
 
-(Please note that, to avoid bulk, the reference Android frameworks [are not committed to this repo](https://github.com/Lanchon/haystack/blob/master/bulk-patch-builder/.gitignore).)
-
 ### Ok, I said I wanted to try this thingy already!
 
 Lets run through an example patching of a OnePlus 2 running Android 6.0.
