@@ -28,11 +28,11 @@ build_one() {
         echo
 
         local patch_source_dir="$patches_source_dir/$patch_name"
-        local api_level="$(cut -d '-' -f 1 <<<"$fileset_name")"
+        #local api_level="$(cut -d '-' -f 1 <<<"$fileset_name")"
         local patch_dex_dir="$patch_tmp_dir/${patch_name}__$fileset_name"
         patch_dex_dirs+=( "$patch_dex_dir" )
 
-        "$base_dir/build-patch" "$patch_source_dir" "$api_level" "$fileset_dir" "$patch_dex_dir"
+        "$base_dir/build-patch" "$patch_source_dir" "$fileset_dir" "$patch_dex_dir"
 
         echo
 
@@ -70,11 +70,11 @@ apply_one() {
         echo
 
         local patch_dex_dir="$patch_tmp_dir/${patch_name}__$fileset_name"
-        local api_level="$(cut -d '-' -f 1 <<<"$fileset_name")"
+        #local api_level="$(cut -d '-' -f 1 <<<"$fileset_name")"
         local patched_fileset_dir="$fileset_tmp_dir/${fileset_name}__$patch_name"
         #patched_fileset_dirs+=( "$patched_fileset_dir" )
 
-        "$base_dir/patch-fileset" "$patch_dex_dir" "$api_level" "$fileset_dir" "$patched_fileset_dir"
+        "$base_dir/patch-fileset" "$patch_dex_dir" "$fileset_dir" "$patched_fileset_dir"
 
         if [ -d "$fileset_dir/dedex" ]; then
             ln -s -t "$patched_fileset_dir" "$fileset_dir/dedex"

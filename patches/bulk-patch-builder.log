@@ -8,7 +8,7 @@
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 10 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/filesets/10-2.3.7-cm-7.2.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3/sigspoof-hook-1.5-2.3__10-2.3.7-cm-7.2.0-crespo/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/10-2.3.7-cm-7.2.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3/sigspoof-hook-1.5-2.3__10-2.3.7-cm-7.2.0-crespo/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/10-2.3.7-cm-7.2.0-crespo/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3/sigspoof-hook-1.5-2.3__10-2.3.7-cm-7.2.0-crespo/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -28,7 +28,7 @@ info: dry run due to '--dry-run' option
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3
 >>> apply patch: services.jar
->>> dexpatcher --api-level 10 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/10-2.3.7-cm-7.2.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3/sigspoof-hook-1.5-2.3__10-2.3.7-cm-7.2.0-crespo/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/10-2.3.7-cm-7.2.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3/sigspoof-hook-1.5-2.3__10-2.3.7-cm-7.2.0-crespo/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/10-2.3.7-cm-7.2.0-crespo/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3/sigspoof-hook-1.5-2.3__10-2.3.7-cm-7.2.0-crespo/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/tmp/services.jar/patched-dex'
@@ -50,7 +50,7 @@ deleting: classes.dex
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 15 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/filesets/15-4.0.4-cm-9.1.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0/sigspoof-hook-4.0__15-4.0.4-cm-9.1.0-crespo/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/15-4.0.4-cm-9.1.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0/sigspoof-hook-4.0__15-4.0.4-cm-9.1.0-crespo/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/15-4.0.4-cm-9.1.0-crespo/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0/sigspoof-hook-4.0__15-4.0.4-cm-9.1.0-crespo/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -70,7 +70,7 @@ info: dry run due to '--dry-run' option
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 15 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/15-4.0.4-cm-9.1.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0/sigspoof-hook-4.0__15-4.0.4-cm-9.1.0-crespo/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/15-4.0.4-cm-9.1.0-crespo/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0/sigspoof-hook-4.0__15-4.0.4-cm-9.1.0-crespo/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/15-4.0.4-cm-9.1.0-crespo/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0/sigspoof-hook-4.0__15-4.0.4-cm-9.1.0-crespo/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/tmp/services.jar/patched-dex'
@@ -92,7 +92,7 @@ deleting: classes.dex
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/filesets/16-4.1.2-cm-10.0.0-maguro/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__16-4.1.2-cm-10.0.0-maguro/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/16-4.1.2-cm-10.0.0-maguro/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__16-4.1.2-cm-10.0.0-maguro/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/16-4.1.2-cm-10.0.0-maguro/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__16-4.1.2-cm-10.0.0-maguro/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -109,7 +109,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/filesets/17-4.2.2-cm-10.1.3-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__17-4.2.2-cm-10.1.3-mako/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/17-4.2.2-cm-10.1.3-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__17-4.2.2-cm-10.1.3-mako/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/17-4.2.2-cm-10.1.3-mako/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__17-4.2.2-cm-10.1.3-mako/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -126,7 +126,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/filesets/18-4.3.1-cm-10.2.1-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__18-4.3.1-cm-10.2.1-mako/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/18-4.3.1-cm-10.2.1-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__18-4.3.1-cm-10.2.1-mako/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/18-4.3.1-cm-10.2.1-mako/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__18-4.3.1-cm-10.2.1-mako/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -143,7 +143,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/filesets/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -160,7 +160,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -177,7 +177,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -194,7 +194,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -214,7 +214,7 @@ info: dry run due to '--dry-run' option
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 16 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/16-4.1.2-cm-10.0.0-maguro/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__16-4.1.2-cm-10.0.0-maguro/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/16-4.1.2-cm-10.0.0-maguro/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__16-4.1.2-cm-10.0.0-maguro/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/16-4.1.2-cm-10.0.0-maguro/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__16-4.1.2-cm-10.0.0-maguro/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -230,7 +230,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 17 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/17-4.2.2-cm-10.1.3-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__17-4.2.2-cm-10.1.3-mako/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/17-4.2.2-cm-10.1.3-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__17-4.2.2-cm-10.1.3-mako/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/17-4.2.2-cm-10.1.3-mako/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__17-4.2.2-cm-10.1.3-mako/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -246,7 +246,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 18 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/18-4.3.1-cm-10.2.1-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__18-4.3.1-cm-10.2.1-mako/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/18-4.3.1-cm-10.2.1-mako/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__18-4.3.1-cm-10.2.1-mako/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/18-4.3.1-cm-10.2.1-mako/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__18-4.3.1-cm-10.2.1-mako/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -262,7 +262,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 19 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -278,7 +278,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -294,7 +294,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -310,7 +310,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -332,7 +332,7 @@ deleting: classes.dex
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -349,7 +349,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -369,7 +369,7 @@ info: dry run due to '--dry-run' option
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex'
@@ -385,7 +385,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1/sigspoof-hook-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/tmp/services.jar/patched-dex'
@@ -407,7 +407,7 @@ deleting: classes.dex
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 10 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -424,7 +424,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 15 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -441,7 +441,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -458,7 +458,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -475,7 +475,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -492,7 +492,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -509,7 +509,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -526,7 +526,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -543,7 +543,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -560,7 +560,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -577,7 +577,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex'
 info: dry run due to '--dry-run' option
@@ -597,7 +597,7 @@ info: dry run due to '--dry-run' option
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 10 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3__sigspoof-core/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-1.5-2.3__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/10-2.3.7-cm-7.2.0-crespo__sigspoof-hook-1.5-2.3__sigspoof-core/tmp/services.jar/patched-dex'
@@ -613,7 +613,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 15 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.0__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -629,7 +629,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 16 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -645,7 +645,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 17 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -661,7 +661,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 18 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -677,7 +677,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 19 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -693,7 +693,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -709,7 +709,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -725,7 +725,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -741,7 +741,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex'
@@ -757,7 +757,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex
+>>> dexpatcher --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-hook-7.0-7.1__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1/services.jar.dex'
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/tmp/services.jar/patched-dex'
@@ -780,13 +780,13 @@ deleting: classes.dex
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -804,13 +804,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -828,13 +828,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -852,13 +852,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -876,13 +876,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -900,13 +900,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -924,13 +924,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -954,13 +954,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
@@ -978,13 +978,13 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/services.jar.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp.$$$/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-7.1__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option

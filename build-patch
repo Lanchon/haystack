@@ -6,14 +6,13 @@ base_suffix=.
 source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
 
 if [ "$3" == "" ]; then
-    usage "build-patch <patch-source-dir> <fileset-api-level> <fileset-dir> [ <target-dir-to-create> [ <java-version> ] ]"
+    usage "build-patch <patch-source-dir> <fileset-dir> [ <target-dir-to-create> [ <java-version> ] ]"
 fi
 
 patch_source_dir="${1%/}"
-api_level="$2"
-fileset_dir="${3%/}"
-patch_build_dir="${4%/}"
-java_version="${5:-$default_java_version}"
+fileset_dir="${2%/}"
+patch_build_dir="${3%/}"
+java_version="${4:-$default_java_version}"
 
 check_dir "$patch_source_dir"
 check_fileset "$fileset_dir"
@@ -88,6 +87,6 @@ rm -rf "$tmp_dir"
 echo
 echo "*** apply fileset patch (dry-run)"
 
-"$base_dir/patch-fileset" "$patch_build_dir" "$api_level" "$fileset_dir" --dry-run
+"$base_dir/patch-fileset" "$patch_build_dir" "$fileset_dir" --dry-run
 
 echo "*** build-patch: success"
