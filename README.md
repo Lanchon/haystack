@@ -113,14 +113,14 @@ sigspoof-ui-global-7.0-7.1
 
 `$ ./patch-fileset`
 ```
-usage: patch-fileset <patch-dex-dir> <fileset-dir> [ <target-dir-to-create> | --dry-run [ <dexpatcher-option> ... ] ]
+usage: patch-fileset <patch-dex-dir> <fileset-api-level> <fileset-dir> [ <target-dir-to-create> | --dry-run [ <dexpatcher-option> ... ] ]
 ```
 
-`$ ./patch-fileset patches/sigspoof-hook-4.1-6.0/ fs-oneplus2/`
+`$ ./patch-fileset patches/sigspoof-hook-4.1-6.0/ 23 fs-oneplus2/`
 ```
 >>> target directory: fs-oneplus2__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex fs-oneplus2/services.jar patches/sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex fs-oneplus2/services.jar patches/sigspoof-hook-4.1-6.0/services.jar.dex
 info: read 'fs-oneplus2/services.jar'
 info: read 'patches/sigspoof-hook-4.1-6.0/services.jar.dex'
 info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex'
@@ -136,11 +136,11 @@ The patched fileset was output to `fs-oneplus2__sigspoof-hook-4.1-6.0` by defaul
 
 Now patch this resulting fileset again to add the core patch:
 
-`$ ./patch-fileset patches/sigspoof-core/ fs-oneplus2__sigspoof-hook-4.1-6.0/`
+`$ ./patch-fileset patches/sigspoof-core/ 23 fs-oneplus2__sigspoof-hook-4.1-6.0/`
 ```
 >>> target directory: fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0/services.jar patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0/services.jar patches/sigspoof-core/services.jar.dex
 info: read 'fs-oneplus2__sigspoof-hook-4.1-6.0/services.jar'
 info: read 'patches/sigspoof-core/services.jar.dex'
 info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
@@ -154,11 +154,11 @@ deleting: classes.dex
 
 Finally, add the corresponding UI patch:
 
-`$ ./patch-fileset patches/sigspoof-ui-global-4.1-6.0/ fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/`
+`$ ./patch-fileset patches/sigspoof-ui-global-4.1-6.0/ 23 fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/`
 ```
 >>> target directory: fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/services.jar/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar patches/sigspoof-ui-global-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/services.jar/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar patches/sigspoof-ui-global-4.1-6.0/services.jar.dex
 info: read 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read 'patches/sigspoof-ui-global-4.1-6.0/services.jar.dex'
 info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/services.jar/patched-dex'
@@ -167,7 +167,7 @@ info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-glob
 deleting: classes.dex
   adding: classes.dex (deflated 55%)
 >>> apply patch: Settings.apk
->>> dexpatcher --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/Settings.apk/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk patches/sigspoof-ui-global-4.1-6.0/Settings.apk.dex
+>>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/Settings.apk/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk patches/sigspoof-ui-global-4.1-6.0/Settings.apk.dex
 info: read 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read 'patches/sigspoof-ui-global-4.1-6.0/Settings.apk.dex'
 info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/Settings.apk/patched-dex'

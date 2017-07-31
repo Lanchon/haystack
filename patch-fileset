@@ -8,13 +8,14 @@ source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
 dry_run_option="--dry-run"
 
 if [ "$3" == "" ]; then
-    usage "patch-fileset <patch-dex-dir> <fileset-dir> [ <target-dir-to-create> | $dry_run_option [ <dexpatcher-option> ... ] ]"
+    usage "patch-fileset <patch-dex-dir> <fileset-api-level> <fileset-dir> [ <target-dir-to-create> | $dry_run_option [ <dexpatcher-option> ... ] ]"
 fi
 
 patch_dex_dir="${1%/}"
-fileset_dir="${2%/}"
-patched_filterset_dir="${3%/}"
-global_dexpatcher_options=( "${@:4}" )
+api_level="$2"
+fileset_dir="${3%/}"
+patched_filterset_dir="${4%/}"
+global_dexpatcher_options=( "${@:5}" )
 
 check_dir "$patch_dex_dir"
 check_fileset "$fileset_dir"
@@ -53,7 +54,7 @@ apply_patch_part() {
 
     echo ">>> apply patch: $name"
 
-    local dexpatcher_options=( "${global_dexpatcher_options[@]}" --verbose )
+    local dexpatcher_options=( "${global_dexpatcher_options[@]}" --api-level "$api_level" --verbose )
 
     if $wet_run; then
 
@@ -105,9 +106,9 @@ apply_patch_part() {
 
     else
 
-        #if (( "$api_level" >= 21 )); then
+        if (( "$api_level" >= 21 )); then
             dexpatcher_options+=( --multi-dex )
-        #fi
+        fi
         run_dexpatcher "${dexpatcher_options[@]}" "$fileset_dir/$name" "$patch_dex_dir/${name}.dex"
 
         if $wet_run; then
