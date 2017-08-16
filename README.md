@@ -34,7 +34,9 @@ DexPatcher understands Dalvik bytecode to a deeper level than the usual smali ma
 
 Requirements:
 
-- An Android device **with a deodex rom** that supports root adb.
+- An Android device that:
+  - Runs a **non-odexed rom** based on Android version 1.5 through 7.1.
+  - And either has TWRP recovery installed or supports root adb in Android.
 - Java runtime.
 - Bash shell. (If you use Windows (dear mother of god!) read [this](https://msdn.microsoft.com/en-us/commandline/wsl/about).)
 - Working adb.
@@ -68,9 +70,11 @@ The resulting log of the bulk-build process can be found [here](https://github.c
 
 ### Ok, I said I wanted to try this thingy already!
 
-Lets run through an example patching of a OnePlus 2 running Android 6.0.
+Let's run through an example patching of a OnePlus 2 running Android 6.0 (which is [API level 23](https://source.android.com/source/build-numbers)).
 
-Connect the phone to your PC via USB and enable root USB debugging.
+Connect the phone to your PC via USB and either:
+- Boot into TWRP, go to the `Mount` section, and mount the system partition.
+- Or remain in Android and enable root USB debugging (if your rom supports it).
 
 Then pull a fileset from the device to directory `fs-oneplus2`:
 
@@ -201,14 +205,14 @@ remount succeeded
 *** push-fileset: success
 ```
 
-Ok! Now lets download my [signature spoofing checker](https://github.com/Lanchon/sigspoof-checker) app to verify that spoofing works:
-
-`$ wget 'https://github.com/Lanchon/sigspoof-checker/releases/download/v1.0/Lanchon-SigSpoof-Checker-1.0.apk'`
-
-Install it and reboot:
-
-`$ adb install Lanchon-SigSpoof-Checker-1.0.apk`
+Ok! Now reboot to Android:
 
 `$ adb reboot`
 
-Upon reboot, launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Allow signature spoofing" (the last option), enable it, go back to the checker app... And profit!
+Upon reboot, download and install my [signature spoofing checker](https://github.com/Lanchon/sigspoof-checker) app to verify that spoofing works:
+
+`$ wget 'https://github.com/Lanchon/sigspoof-checker/releases/download/v1.0/Lanchon-SigSpoof-Checker-1.0.apk'`
+
+`$ adb install Lanchon-SigSpoof-Checker-1.0.apk`
+
+Launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Allow signature spoofing" (the last option), enable it, go back to the checker app... And profit!
