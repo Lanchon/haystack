@@ -31,11 +31,9 @@ public class PackageManagerService /* extends IPackageManager.Stub */ {
     @DexIgnore
     private PackageManagerService() { throw null; }
 
-    @DexEdit(target = "generatePackageInfo")
-    PackageInfo source_Hook_generatePackageInfo(PackageParser.Package p, int flags) { throw null; }
-    @DexAdd
+    @DexWrap
     PackageInfo generatePackageInfo(PackageParser.Package p, int flags) {
-        PackageInfo pi = source_Hook_generatePackageInfo(p, flags);
+        PackageInfo pi = generatePackageInfo(p, flags);
         if (p != null && pi != null) pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, -1);
         return pi;
     }

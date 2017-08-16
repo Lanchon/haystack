@@ -120,12 +120,10 @@ public class DevelopmentSettings extends PreferenceFragment {
     @DexIgnore
     private DevelopmentSettings() { throw null; }
 
-    @DexEdit(target = "onCreate")
-    protected void source_FakeSignatureGlobalUI_onCreate(Bundle icicle) { throw null; }
-    @DexAdd
+    @DexWrap
     @Override
     public void onCreate(Bundle icicle) {
-        source_FakeSignatureGlobalUI_onCreate(icicle);
+        onCreate(icicle);
         try {
             PreferenceGroup pg = (PreferenceGroup) findPreference(
                     FakeSignatureGlobalUI.DEBUG_APPLICATIONS_CATEGORY_KEY);
@@ -148,11 +146,9 @@ public class DevelopmentSettings extends PreferenceFragment {
         }
     }
 
-    @DexEdit(target = "updateAllOptions")
-    private void source_FakeSignatureGlobalUI_updateAllOptions() { throw null; }
-    @DexAdd
+    @DexWrap
     private void updateAllOptions() {
-        source_FakeSignatureGlobalUI_updateAllOptions();
+        updateAllOptions();
         if (mAllowFakeSignatureGlobal != null) {
             updateAllowFakeSignatureGlobalOption();
         }
@@ -165,9 +161,7 @@ public class DevelopmentSettings extends PreferenceFragment {
         updateTwoStatePreference(mAllowFakeSignatureGlobal, value);
     }
 
-    @DexEdit(target = "onPreferenceTreeClick")
-    protected boolean source_FakeSignatureGlobalUI_onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) { throw null; }
-    @DexAdd
+    @DexWrap
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (Utils.isMonkeyRunning()) {
@@ -179,7 +173,7 @@ public class DevelopmentSettings extends PreferenceFragment {
                 return false;
             }
         }
-        return source_FakeSignatureGlobalUI_onPreferenceTreeClick(preferenceScreen, preference);
+        return onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @DexAdd
@@ -221,11 +215,9 @@ public class DevelopmentSettings extends PreferenceFragment {
         }
     }
 
-    @DexEdit(target = "dismissDialogs")
-    private void source_FakeSignatureGlobalUI_dismissDialogs() { throw null; }
-    @DexAdd
+    @DexWrap
     private void dismissDialogs() {
-        source_FakeSignatureGlobalUI_dismissDialogs();
+        dismissDialogs();
         if (mAllowFakeSignatureGlobalDialog != null) {
             mAllowFakeSignatureGlobalDialog.dismiss();
             mAllowFakeSignatureGlobalDialog = null;

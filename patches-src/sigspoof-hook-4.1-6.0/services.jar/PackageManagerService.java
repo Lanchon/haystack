@@ -36,15 +36,14 @@ public class PackageManagerService /* extends IPackageManager.Stub */ {
     @DexIgnore
     private PackageManagerService() { throw null; }
 
-    // Rename the existing generatePackageInfo(...) method. The stub method
-    // implementation provided by the patch will be discarded.
-    @DexEdit(target = "generatePackageInfo")
-    PackageInfo source_Hook_generatePackageInfo(PackageParser.Package p, int flags, int userId) { throw null; }
-    // Add a new generatePackageInfo(...) method. Call the original method we
-    // are replacing, then invoke a hook that can modify its return value.
-    @DexAdd
+    // Wrap the existing generatePackageInfo(...) method with this new method.
+    // The new method calls the original, then invokes a hook that can modify
+    // its return value.
+    @DexWrap
     PackageInfo generatePackageInfo(PackageParser.Package p, int flags, int userId) {
-        PackageInfo pi = source_Hook_generatePackageInfo(p, flags, userId);
+        // This recursive call gets converted to an invocation of the original
+        // method being wrapped.
+        PackageInfo pi = generatePackageInfo(p, flags, userId);
         if (p != null && pi != null) pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, userId);
         return pi;
     }
