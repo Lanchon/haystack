@@ -29,12 +29,7 @@ public class PackageManagerService /* extends IPackageManager.Stub */ {
     // We need to declare this field to be able to reference it from the patch.
     // The field itself provided by the patch will be discarded.
     @DexIgnore
-    final Context mContext;
-
-    // If we do not define any constructors the compiler will add one by default,
-    // so lets define one and instruct the patcher to discard it.
-    @DexIgnore
-    private PackageManagerService() { throw null; }
+    /* final */ Context mContext;
 
     // Wrap the existing generatePackageInfo(...) method with this new method.
     // The new method calls the original, then invokes a hook that can modify

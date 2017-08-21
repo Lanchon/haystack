@@ -43,7 +43,4 @@ class GeneratePackageInfoHook {
                 FakeSignatureGlobalUI.SECURE_SETTING, 0) != 0;
     }
 
-    @DexIgnore
-    private GeneratePackageInfoHook() { throw null; }
-
 }

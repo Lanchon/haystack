@@ -87,7 +87,4 @@ class GeneratePackageInfoHook {
         return pi;
     }
 
-    @DexIgnore
-    private GeneratePackageInfoHook() { throw null; }
-
 }
