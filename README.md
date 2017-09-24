@@ -103,6 +103,8 @@ adb: error: remote object '/system/framework/core-oj.jar' does not exist
 *** pull-fileset: success
 ```
 
+**IMPORTANT:** Make sure you keep a backup of the fileset you just pulled somewhere safe. You will need this backup to patch your device again or to restore it to its unpatched state. To do these things without a backup you will need to reinstall Android on your device.
+
 Patch the fileset with the required hook for Android 6.0:
 
 `$ ls patches`
