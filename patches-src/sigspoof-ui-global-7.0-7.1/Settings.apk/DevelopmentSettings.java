@@ -124,10 +124,9 @@ public class DevelopmentSettings extends PreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) { throw null; }
 
-    @DexWrap
+    @DexAppend
     @Override
     public void onCreate(Bundle icicle) {
-        onCreate(icicle);
         try {
             PreferenceGroup pg = (PreferenceGroup) findPreference(
                     FakeSignatureGlobalUI.DEBUG_APPLICATIONS_CATEGORY_KEY);
@@ -150,9 +149,8 @@ public class DevelopmentSettings extends PreferenceFragment {
         }
     }
 
-    @DexWrap
+    @DexAppend
     private void updateAllOptions() {
-        updateAllOptions();
         if (mAllowFakeSignatureGlobal != null) {
             updateAllowFakeSignatureGlobalOption();
         }
@@ -219,9 +217,8 @@ public class DevelopmentSettings extends PreferenceFragment {
         }
     }
 
-    @DexWrap
+    @DexAppend
     private void dismissDialogs() {
-        dismissDialogs();
         if (mAllowFakeSignatureGlobalDialog != null) {
             mAllowFakeSignatureGlobalDialog.dismiss();
             mAllowFakeSignatureGlobalDialog = null;
