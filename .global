@@ -13,9 +13,11 @@ fs_non_priv_apps=()
 
 ### Paths
 
+tools_dir="$base_dir/tools"
+
 android_build_tools_dir=~/"android/sdk/build-tools/17.0.0"
 
-dexpatcher_dir="$base_dir/dexpatcher"
+dexpatcher_dir="$tools_dir/dexpatcher"
 dexpatcher_jar=( "$dexpatcher_dir"/dexpatcher-[0-9]*.jar )
 dexpatcher_annotation_jar=( "$dexpatcher_dir"/dexpatcher-annotation-*.jar )
 
