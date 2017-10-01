@@ -3,7 +3,7 @@
 base_dir="$(dirname "$(readlink -f "$0")")/$base_suffix"
 base_dir="${base_dir%/}"
 
-default_java_version="1.5"
+default_java_version="1.6"
 
 ### Filesets
 
