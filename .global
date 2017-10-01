@@ -15,7 +15,7 @@ fs_non_priv_apps=()
 
 tools_dir="$base_dir/tools"
 
-android_build_tools_dir=~/"android/sdk/build-tools/17.0.0"
+dx_dir=( "$tools_dir/dx"/* )
 
 dexpatcher_dir="$tools_dir/dexpatcher"
 dexpatcher_jar=( "$dexpatcher_dir"/dexpatcher-[0-9]*.jar )
@@ -48,7 +48,7 @@ run_d2j_dex2jar() {
 
 run_dx() {
     #echo ">>>" dx "$@"
-    "$android_build_tools_dir/dx" "$@"
+    bash "$dx_dir/dx" "$@"
 }
 
 run_dexpatcher() {
