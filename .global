@@ -15,6 +15,8 @@ fs_non_priv_apps=()
 
 tools_dir="$base_dir/tools"
 
+dex2jar_dir=( "$tools_dir/dex2jar"/* )
+
 dx_dir=( "$tools_dir/dx"/* )
 
 dexpatcher_dir="$tools_dir/dexpatcher"
@@ -43,7 +45,7 @@ run_javac() {
 
 run_d2j_dex2jar() {
     #echo ">>>" d2j-dex2jar "$@"
-    d2j-dex2jar "$@"
+    sh "$dex2jar_dir/d2j-dex2jar.sh" "$@"
 }
 
 run_dx() {
