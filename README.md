@@ -215,8 +215,8 @@ Ok! Now reboot to Android:
 
 Upon reboot, download and install my [signature spoofing checker](https://github.com/Lanchon/sigspoof-checker) app to verify that spoofing works:
 
-`$ wget 'https://github.com/Lanchon/sigspoof-checker/releases/download/v1.0/Lanchon-SigSpoof-Checker-1.0.apk'`
+`$ wget 'https://f-droid.org/repo/lanchon.sigspoof.checker_2.apk'`
 
-`$ adb install Lanchon-SigSpoof-Checker-1.0.apk`
+`$ adb install lanchon.sigspoof.checker_2.apk`
 
 Launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Allow signature spoofing" (the last option), enable it, go back to the checker app... And profit!
