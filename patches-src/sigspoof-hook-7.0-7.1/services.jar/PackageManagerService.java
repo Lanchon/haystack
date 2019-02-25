@@ -24,7 +24,7 @@ import com.android.server.pm.PackageSetting;
 
 import lanchon.dexpatcher.annotation.*;
 
-@DexEdit(onlyEditMembers = true)
+@DexEdit(contentOnly = true)
 public class PackageManagerService /* extends IPackageManager.Stub */ {
 
     @DexIgnore

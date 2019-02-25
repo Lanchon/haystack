@@ -23,7 +23,7 @@ import android.content.pm.PackageParser;
 import lanchon.dexpatcher.annotation.*;
 
 // Lets modify the PackageManagerService class.
-@DexEdit(onlyEditMembers = true)
+@DexEdit(contentOnly = true)
 public class PackageManagerService /* extends IPackageManager.Stub */ {
 
     // We need to declare this field to be able to reference it from the patch.

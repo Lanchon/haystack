@@ -22,7 +22,7 @@ import android.content.pm.PackageParser;
 
 import lanchon.dexpatcher.annotation.*;
 
-@DexEdit(onlyEditMembers = true)
+@DexEdit(contentOnly = true)
 public class PackageManagerService /* extends IPackageManager.Stub */ {
 
     @DexIgnore

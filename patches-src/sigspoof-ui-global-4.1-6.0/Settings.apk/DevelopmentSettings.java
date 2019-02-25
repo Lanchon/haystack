@@ -42,7 +42,7 @@ import android.util.Log;
 
 import lanchon.dexpatcher.annotation.*;
 
-@DexEdit(onlyEditMembers = true)
+@DexEdit(contentOnly = true)
 public class DevelopmentSettings extends PreferenceFragment {
 
     // SwitchPreference Hooks
