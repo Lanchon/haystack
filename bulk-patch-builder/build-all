@@ -56,7 +56,7 @@ apply_one() {
     echo "********* APPLY: $patch_name"
     echo
 
-    local patch_tmp_dir="$tmp_dir/$patch_name"
+    local patch_dex_dir="$patches_dex_dir/$patch_name"
     local fileset_tmp_dir="$tmp_dir/${patch_name}__fs"
     mkdir "$fileset_tmp_dir"
 
@@ -69,7 +69,6 @@ apply_one() {
         echo "****** to: $fileset_name"
         echo
 
-        local patch_dex_dir="$patch_tmp_dir/${patch_name}__$fileset_name"
         local api_level="$(cut -d '-' -f 1 <<<"$fileset_name")"
         local patched_fileset_dir="$fileset_tmp_dir/${fileset_name}__$patch_name"
         #patched_fileset_dirs+=( "$patched_fileset_dir" )
