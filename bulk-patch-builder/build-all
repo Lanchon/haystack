@@ -102,7 +102,7 @@ build_all() {
 
     shopt -s nullglob
 
-    tmp_dir="$patches_dex_dir/tmp.\$\$\$"
+    tmp_dir="$patches_dex_dir/tmp-dir"
     mkdir "$tmp_dir"
     echo "*" >"$tmp_dir/.gitignore"
 
