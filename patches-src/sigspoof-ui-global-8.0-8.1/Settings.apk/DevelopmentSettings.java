@@ -33,11 +33,9 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.TwoStatePreference;
 import android.util.Log;
 
 import com.android.settings.Utils;
@@ -47,49 +45,8 @@ import lanchon.dexpatcher.annotation.*;
 @DexEdit(contentOnly = true)
 public class DevelopmentSettings extends PreferenceFragment {
 
-    // SwitchPreference Hooks
-
     @DexIgnore private final ArrayList<SwitchPreference> mResetSwitchPrefs = new ArrayList<SwitchPreference>();
     @DexIgnore void updateSwitchPreference(SwitchPreference switchPreference, boolean value) { throw null; }
-
-    // CheckBoxPreference Hooks
-
-    @DexIgnore private final ArrayList<CheckBoxPreference> mResetCbPrefs = new ArrayList<CheckBoxPreference>();
-    @DexIgnore void updateCheckBox(CheckBoxPreference checkBox, boolean value) { throw null; }
-
-    // TwoStatePreference Interface
-
-    @DexAdd
-    private boolean useSwitchPreference() {
-        return Build.VERSION.SDK_INT >= 22;     // Build.VERSION_CODES.LOLLIPOP_MR1
-    }
-
-    @DexAdd
-    private TwoStatePreference createTwoStatePreference(Context context) {
-        if (useSwitchPreference()) {
-            return new SwitchPreference(context);
-        } else {
-            return new CheckBoxPreference(context);
-        }
-    }
-
-    @DexAdd
-    private boolean mResetTwoStatePrefsAdd(TwoStatePreference preference) {
-        if (useSwitchPreference()) {
-            return mResetSwitchPrefs.add((SwitchPreference) preference);
-        } else {
-            return mResetCbPrefs.add((CheckBoxPreference) preference);
-        }
-    }
-
-    @DexAdd
-    private void updateTwoStatePreference(TwoStatePreference preference, boolean value) {
-        if (useSwitchPreference()) {
-            updateSwitchPreference((SwitchPreference) preference, value);
-        } else {
-            updateCheckBox((CheckBoxPreference) preference, value);
-        }
-    }
 
     @DexAdd
     static class FakeSignatureGlobalUI {
@@ -116,7 +73,7 @@ public class DevelopmentSettings extends PreferenceFragment {
 
     @DexIgnore private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
-    @DexAdd private TwoStatePreference mAllowFakeSignatureGlobal;
+    @DexAdd private SwitchPreference mAllowFakeSignatureGlobal;
     @DexAdd /* private */ Dialog mAllowFakeSignatureGlobalDialog;
 
     @DexIgnore
@@ -133,12 +90,12 @@ public class DevelopmentSettings extends PreferenceFragment {
             PreferenceGroup pg = (PreferenceGroup) findPreference(
                     FakeSignatureGlobalUI.DEBUG_APPLICATIONS_CATEGORY_KEY);
             if (pg != null) {
-                TwoStatePreference p = createTwoStatePreference(pg.getContext());
+                SwitchPreference p = new SwitchPreference(pg.getContext());
                 p.setKey(FakeSignatureGlobalUI.SETTING_SECURE_KEY);
                 p.setTitle(FakeSignatureGlobalUI.SETTING_TITLE);
                 p.setSummary(FakeSignatureGlobalUI.SETTING_SUMMARY);
                 p.setPersistent(false);
-                mResetTwoStatePrefsAdd(p);
+                mResetSwitchPrefs.add(p);
                 mAllPrefs.add(p);
                 //pg.setOrderingAsAdded(true);
                 pg.addPreference(p);
@@ -162,7 +119,7 @@ public class DevelopmentSettings extends PreferenceFragment {
     /* private */ void updateAllowFakeSignatureGlobalOption() {
         boolean value = Settings.Secure.getInt(getActivity().getContentResolver(),
                 FakeSignatureGlobalUI.SETTING_SECURE_KEY, 0) != 0;
-        updateTwoStatePreference(mAllowFakeSignatureGlobal, value);
+        updateSwitchPreference(mAllowFakeSignatureGlobal, value);
     }
 
     @DexWrap
