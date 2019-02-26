@@ -116,17 +116,21 @@ build_all() {
     local  MM=( "$filesets_dir"/23-* )
     local   N=( "$filesets_dir"/2[4-5]-* )
     local   O=( "$filesets_dir"/2[6-7]-* )
+    local   P=( "$filesets_dir"/28-* )
 
     # Build the hook patches
 
     build_and_apply_one sigspoof-hook-1.5-2.3 "${GB[@]}"
     build_and_apply_one sigspoof-hook-4.0 "${ICS[@]}"
     build_and_apply_one sigspoof-hook-4.1-6.0 "${JB[@]}" "${KK[@]}" "${LP[@]}" "${MM[@]}"
-    build_and_apply_one sigspoof-hook-7.0-8.1 "${N[@]}" "${O[@]}"
+    build_and_apply_one sigspoof-hook-7.0-9.0 "${N[@]}" "${O[@]}" "${P[@]}"
 
     # Build the core patch
 
-    build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-8.1}__fs/*
+    # Avoid building the core patch on Android 9.0 (Workaround for https://github.com/Lanchon/haystack/issues/23)
+    #build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
+    build_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0}__fs/* "$tmp_dir"/sigspoof-hook-7.0-9.0__fs/2[4-7]-*
+    apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
 
     # Build the UI patches
 
