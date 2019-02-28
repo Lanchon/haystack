@@ -118,6 +118,7 @@ sigspoof-hook-7.0-9.0
 sigspoof-ui-global-4.1-6.0
 sigspoof-ui-global-7.0-7.1
 sigspoof-ui-global-8.0-8.1
+sigspoof-ui-global-9.0
 ```
 
 `$ ./patch-fileset`

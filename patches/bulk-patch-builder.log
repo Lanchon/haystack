@@ -1375,3 +1375,36 @@ info: dry run due to '--dry-run' option
 ********* BUILT AGAINST: 26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core
 
 
+********* BUILD: sigspoof-ui-global-9.0
+
+****** build: sigspoof-ui-global-9.0
+****** against: 28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core
+
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core
+>>> build patch: services.jar
+>>> build patch: Settings.apk
+
+*** apply fileset patch (dry-run)
+>>> apply patch: services.jar
+>>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
+DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex'
+info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': (GeneratePackageInfoHook.java:33): implicit ignore of trivial default constructor
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+>>> apply patch: Settings.apk
+>>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
+DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex'
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+
+*** patch-fileset: success
+*** build-patch: success
+
+********* PUBLISH: sigspoof-ui-global-9.0
+********* BUILT AGAINST: 28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core
+
+
