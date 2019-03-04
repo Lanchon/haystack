@@ -30,6 +30,7 @@ class GeneratePackageInfoHook {
 
     private GeneratePackageInfoHook() {}
 
+    // Patch-time marker for hook implementations that require a valid userdId.
     private boolean multiUserMarker;
 
 }

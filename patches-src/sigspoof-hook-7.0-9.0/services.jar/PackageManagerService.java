@@ -27,8 +27,7 @@ import lanchon.dexpatcher.annotation.*;
 @DexEdit(contentOnly = true)
 public class PackageManagerService /* extends IPackageManager.Stub */ {
 
-    @DexIgnore
-    /* final */ Context mContext;
+    @DexIgnore /* final */ Context mContext;
 
     @DexWrap
     private PackageInfo generatePackageInfo(PackageSetting ps, int flags, int userId) {

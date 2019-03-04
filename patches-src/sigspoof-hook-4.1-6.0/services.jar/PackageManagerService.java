@@ -22,22 +22,13 @@ import android.content.pm.PackageParser;
 
 import lanchon.dexpatcher.annotation.*;
 
-// Lets modify the PackageManagerService class.
 @DexEdit(contentOnly = true)
 public class PackageManagerService /* extends IPackageManager.Stub */ {
 
-    // We need to declare this field to be able to reference it from the patch.
-    // The field itself provided by the patch will be discarded.
-    @DexIgnore
-    /* final */ Context mContext;
+    @DexIgnore /* final */ Context mContext;
 
-    // Wrap the existing generatePackageInfo(...) method with this new method.
-    // The new method calls the original, then invokes a hook that can modify
-    // its return value.
     @DexWrap
     PackageInfo generatePackageInfo(PackageParser.Package p, int flags, int userId) {
-        // This recursive call gets converted to an invocation of the original
-        // method being wrapped.
         PackageInfo pi = generatePackageInfo(p, flags, userId);
         if (p != null && pi != null) pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, userId);
         return pi;

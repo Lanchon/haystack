@@ -22,7 +22,6 @@ import android.content.pm.PackageParser;
 
 import lanchon.dexpatcher.annotation.*;
 
-// Types not explicitely tagged in the patch are added by default.
 class GeneratePackageInfoHook {
 
     static PackageInfo hook(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
