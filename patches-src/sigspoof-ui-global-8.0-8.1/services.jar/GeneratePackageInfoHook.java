@@ -1,8 +1,8 @@
 /*
  * Copyright (C) 2015 Marvin W <https://github.com/mar-v-in>
- * Copyright (C) 2016 Lanchon <https://github.com/Lanchon>
+ * Copyright (C) 2016-2019 Lanchon <https://github.com/Lanchon>
  *
- * This is Marvin's work converted to DexPatcher patches by Lanchon.
+ * Based on Marvin's work:
  *
  *      https://gerrit.omnirom.org/#/c/14898/
  *      https://gerrit.omnirom.org/#/c/14899/
@@ -33,14 +33,11 @@ import lanchon.dexpatcher.annotation.*;
 class GeneratePackageInfoHook {
 
     @DexAdd
-    static class FakeSignatureGlobalUI {
-        static final String SECURE_SETTING = "allow_fake_signature_global";
-    }
+    private static final String SECURE_SETTING_KEY = "allow_fake_signature_global";
 
     @DexReplace
     private static boolean getGlobalEnable(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
-        return Settings.Secure.getInt(context.getContentResolver(),
-                FakeSignatureGlobalUI.SECURE_SETTING, 0) != 0;
+        return Settings.Secure.getInt(context.getContentResolver(), SECURE_SETTING_KEY, 0) != 0;
     }
 
 }

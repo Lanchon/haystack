@@ -32,9 +32,12 @@ import lanchon.dexpatcher.annotation.*;
 @DexEdit
 class GeneratePackageInfoHook {
 
+    @DexAdd
+    private static final String SECURE_SETTING_KEY = "allow_fake_signature_global";
+
     @DexReplace
     private static boolean getGlobalEnable(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
-        return Settings.Secure.getInt(context.getContentResolver(), FakeSignatureGlobalUI.SECURE_SETTING_KEY, 0) != 0;
+        return Settings.Secure.getInt(context.getContentResolver(), SECURE_SETTING_KEY, 0) != 0;
     }
 
 }
