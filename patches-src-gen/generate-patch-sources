@@ -1,0 +1,86 @@
+#!/bin/bash
+
+set -e
+
+#sed -i 's/from/to/g'                       // global replace
+#sed -i '/^some line$/d'                    // delete line
+#sed -i '/^some line$/,+2d'                 // delete line and next 2 lines
+#sed -i '/^some line$/i line 1\nline 2'     // insert lines before line
+#sed -i '/^some line$/a line 1\nline 2'     // insert lines after line
+
+base_suffix=..
+source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
+
+generator_base_dir="$(dirname "$(readlink -f "$0")")"
+generator_base_dir="${generator_base_dir%/}"
+
+patches_source_dir="$base_dir/patches-src"
+
+mkdir -p "$patches_source_dir"
+rm -rf "$patches_source_dir"/*
+
+transform_files() {
+
+    local cutoff="$1"
+    local files=( "${@:2}" )
+
+    local qc="$(echo "$cutoff" | sed 's/\./\\\./g')"
+
+    for file in "${files[@]}"; do
+        #if [[ -f "$file" ]]; then
+
+            sed -i "s~\/\/<${qc}\/\/~\/\*<${qc}\*\/~g" "$file"
+            sed -i "s~\/\*>${qc}\*\/~\/\/>${qc}\/\/~g" "$file"
+
+        #fi
+    done
+
+}
+
+transform_dir() {
+
+    shopt -s nullglob globstar
+
+    local cutoff="$1"
+    local dir="$2"
+
+    for file in "$dir"/**/*"(<$cutoff)"; do
+        mv -T "$file" "${file%"(<$cutoff)"}"
+    done
+
+    transform_files "$cutoff" "$dir"/**/*".java"{,"("*")"}
+
+}
+
+generate_one() {
+
+    local cutoff="$1"
+    local source="$2"
+    local target="$3"
+
+    cp -r "$source" "$target"
+    
+    transform_dir "$cutoff" "$target"
+
+}
+
+generate_all() {
+
+    cd "$patches_source_dir"
+    local gen="$generator_base_dir"
+
+    cp -r "$gen"/sigspoof-hook sigspoof-hook-7.0-9.0
+    generate_one '7.0' sigspoof-hook-7.0-9.0 sigspoof-hook-4.1-6.0
+    generate_one '4.1' sigspoof-hook-4.1-6.0 sigspoof-hook-4.0
+    generate_one '4.0' sigspoof-hook-4.0 sigspoof-hook-1.5-2.3
+
+    cp -r "$gen"/sigspoof-core sigspoof-core
+
+    cp -r "$gen"/sigspoof-ui-global-4.1-6.0 sigspoof-ui-global-4.1-6.0
+    cp -r "$gen"/sigspoof-ui-global-7.0-8.1 sigspoof-ui-global-8.0-8.1
+    generate_one '8.0' sigspoof-ui-global-8.0-8.1 sigspoof-ui-global-7.0-7.1
+    cp -r "$gen"/sigspoof-ui-global-9.0 sigspoof-ui-global-9.0
+
+}
+
+generate_all

@@ -20,7 +20,8 @@
  * limitations under the License.
  */
 
-package com.android.settings;
+/*<8.0*/ package com.android.settings;
+//>8.0// package com.android.settings.development;
 
 import java.util.ArrayList;
 
@@ -37,6 +38,8 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
 import android.util.Log;
+
+//>8.0// import com.android.settings.Utils;
 
 import lanchon.dexpatcher.annotation.*;
 

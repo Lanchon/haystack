@@ -1,5 +1,11 @@
 /*
- * Copyright (C) 2016 Lanchon <https://github.com/Lanchon>
+ * Copyright (C) 2015 Marvin W <https://github.com/mar-v-in>
+ * Copyright (C) 2016-2019 Lanchon <https://github.com/Lanchon>
+ *
+ * Based on Marvin's work:
+ *
+ *      https://gerrit.omnirom.org/#/c/14898/
+ *      https://gerrit.omnirom.org/#/c/14899/
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,18 +25,16 @@ package com.android.server.pm;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageParser;
+import android.provider.Settings;
 
 import lanchon.dexpatcher.annotation.*;
 
+@DexEdit
 class GeneratePackageInfoHook {
 
-    static PackageInfo hook(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
-        return pi;
+    @DexReplace
+    private static boolean getGlobalEnable(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
+        return Settings.Secure.getInt(context.getContentResolver(), FakeSignatureGlobalUI.SECURE_SETTING_KEY, 0) != 0;
     }
-
-    private GeneratePackageInfoHook() {}
-
-    /*>4.1*/ // Patch-time marker for hook implementations that require a valid userdId.
-    /*>4.1*/ private boolean multiUserMarker;
 
 }

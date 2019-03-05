@@ -98,6 +98,15 @@ build_and_apply_one() {
 
 }
 
+generate_patch_sources() {
+
+    echo "********* GENERATE PATCH SOURCES"
+    "$base_dir/patches-src-gen/generate-patch-sources"
+    echo
+    echo
+
+}
+
 build_all() {
 
     shopt -s nullglob
@@ -117,6 +126,10 @@ build_all() {
     local   N=( "$filesets_dir"/2[4-5]-* )
     local   O=( "$filesets_dir"/2[6-7]-* )
     local   P=( "$filesets_dir"/28-* )
+
+    # Generate patch sources
+
+    generate_patch_sources
 
     # Build the hook patches
 

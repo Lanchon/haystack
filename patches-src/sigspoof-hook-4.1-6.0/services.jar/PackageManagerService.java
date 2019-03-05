@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-package com.android.server.pm;
+//<4.0// package com.android.server;
+/*>4.0*/ package com.android.server.pm;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageParser;
+
+//<4.0// import com.android.server.pm.GeneratePackageInfoHookAccessor;
+
+//>7.0// import com.android.server.pm.PackageSetting;
 
 import lanchon.dexpatcher.annotation.*;
 
@@ -28,9 +33,18 @@ public class PackageManagerService /* extends IPackageManager.Stub */ {
     @DexIgnore /* final */ Context mContext;
 
     @DexWrap
-    PackageInfo generatePackageInfo(PackageParser.Package p, int flags, int userId) {
-        PackageInfo pi = generatePackageInfo(p, flags, userId);
-        if (p != null && pi != null) pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, userId);
+    //<4.1// PackageInfo generatePackageInfo(PackageParser.Package p, int flags) {
+    /*>4.1*/ /*<7.0*/ PackageInfo generatePackageInfo(PackageParser.Package p, int flags, int userId) {
+    //>7.0// private PackageInfo generatePackageInfo(PackageSetting p, int flags, int userId) {
+        //<4.1// PackageInfo pi = generatePackageInfo(p, flags);
+        /*>4.1*/ PackageInfo pi = generatePackageInfo(p, flags, userId);
+        if (p != null && pi != null) {
+            //<4.0// pi = GeneratePackageInfoHookAccessor.hook(pi, mContext, p, flags, -1);
+            /*>4.0*/ //<4.1// pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, -1);
+            /*>4.1*/ /*<7.0*/ pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, userId);
+            //>7.0// PackageParser.Package pp = p.pkg;
+            //>7.0// if (pp != null) pi = GeneratePackageInfoHook.hook(pi, mContext, pp, flags, userId);
+        }
         return pi;
     }
 

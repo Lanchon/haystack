@@ -22,15 +22,12 @@ import android.content.pm.PackageParser;
 
 import lanchon.dexpatcher.annotation.*;
 
-class GeneratePackageInfoHook {
+public class GeneratePackageInfoHookAccessor {
 
-    static PackageInfo hook(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
-        return pi;
+    public static PackageInfo hook(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
+        return GeneratePackageInfoHook.hook(pi, context, p, flags, userId);
     }
 
-    private GeneratePackageInfoHook() {}
-
-    /*>4.1*/ // Patch-time marker for hook implementations that require a valid userdId.
-    /*>4.1*/ private boolean multiUserMarker;
+    private GeneratePackageInfoHookAccessor() {}
 
 }
