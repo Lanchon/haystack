@@ -115,17 +115,37 @@ build_all() {
     mkdir "$tmp_dir"
     echo "*" >"$tmp_dir/.gitignore"
 
-    local ALL=( "$filesets_dir"/* )
+    # Android versions and API levels
 
-    local  GB=( "$filesets_dir"/{09,10}-* )
-    local ICS=( "$filesets_dir"/1[4-5]-* )
-    local  JB=( "$filesets_dir"/1[6-8]-* )
-    local  KK=( "$filesets_dir"/19-* )
-    local  LP=( "$filesets_dir"/2[1-2]-* )
-    local  MM=( "$filesets_dir"/23-* )
-    local   N=( "$filesets_dir"/2[4-5]-* )
-    local   O=( "$filesets_dir"/2[6-7]-* )
-    local   P=( "$filesets_dir"/28-* )
+    #    API   Version    Codename
+    #    28    9.0        Pie
+    #    27    8.1        Oreo
+    #    26    8.0        Oreo
+    #    25    7.1        Nougat
+    #    24    7.0        Nougat
+    #    23    6.0        Marshmallow
+    #    22    5.1        Lollipop
+    #    21    5.0        Lollipop
+    #   (20)   -          -
+    #    19    4.4        KitKat
+    #    18    4.3        Jelly Bean
+    #    17    4.2        Jelly Bean
+    #    16    4.1        Jelly Bean
+    #    15    4.0.3-4    Ice Cream Sandwich
+    #    14    4.0.1-2    Ice Cream Sandwich
+    #   (13)   3.2        Honeycomb
+    #   (12)   3.1        Honeycomb
+    #   (11)   3.0        Honeycomb
+    #    10    2.3.3-7    Gingerbread
+    #    09    2.3.0-2    Gingerbread
+    #    08    2.2        Froyo
+    #    07    2.1        Eclair
+    #    06    2.0.1      Eclair
+    #    05    2.0.0      Eclair
+    #    04    1.6        Donut
+    #    03    1.5        Cupcake
+    #    02    1.1        -
+    #    01    1.0        -
 
     # Generate patch sources
 
@@ -133,16 +153,16 @@ build_all() {
 
     # Build the hook patches
 
-    build_and_apply_one sigspoof-hook-1.5-2.3 "${GB[@]}"
-    build_and_apply_one sigspoof-hook-4.0 "${ICS[@]}"
-    build_and_apply_one sigspoof-hook-4.1-6.0 "${JB[@]}" "${KK[@]}" "${LP[@]}" "${MM[@]}"
-    build_and_apply_one sigspoof-hook-7.0-9.0 "${N[@]}" "${O[@]}" "${P[@]}"
+    build_and_apply_one sigspoof-hook-1.5-2.3 "$filesets_dir"/{0[3-9],10}-*
+    build_and_apply_one sigspoof-hook-4.0     "$filesets_dir"/1[4-5]-*
+    build_and_apply_one sigspoof-hook-4.1-6.0 "$filesets_dir"/{1[6-9],2[1-3]}-*
+    build_and_apply_one sigspoof-hook-7.0-9.0 "$filesets_dir"/2[4-8]-*
 
     # Build the core patch
 
     # Avoid building the core patch on Android 9.0 (Workaround for https://github.com/Lanchon/haystack/issues/23)
     #build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
-    build_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0}__fs/* "$tmp_dir"/sigspoof-hook-7.0-9.0__fs/2[4-7]-*
+    build_one sigspoof-core "$tmp_dir"/sigspoof-hook-{{1.5-2.3,4.0,4.1-6.0}__fs/*,7.0-9.0__fs/2[4-7]-*}
     apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
 
     # Build the UI patches
@@ -150,7 +170,7 @@ build_all() {
     build_one sigspoof-ui-global-4.1-6.0 "$tmp_dir"/sigspoof-core__fs/{1[6-9],2[1-3]}-*
     build_one sigspoof-ui-global-7.0-7.1 "$tmp_dir"/sigspoof-core__fs/2[4-5]-*
     build_one sigspoof-ui-global-8.0-8.1 "$tmp_dir"/sigspoof-core__fs/2[6-7]-*
-    build_one sigspoof-ui-global-9.0 "$tmp_dir"/sigspoof-core__fs/28-*
+    build_one sigspoof-ui-global-9.0     "$tmp_dir"/sigspoof-core__fs/28-*
 
     rm -rf "$tmp_dir"
 
