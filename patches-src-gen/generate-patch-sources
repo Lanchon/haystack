@@ -45,6 +45,7 @@ transform_dir() {
     local dir="$2"
 
     for file in "$dir"/**/*"(<$cutoff)"; do
+        rm -rf "${file%"(<$cutoff)"}"
         mv -T "$file" "${file%"(<$cutoff)"}"
     done
 
@@ -76,10 +77,10 @@ generate_all() {
 
     cp -r "$gen"/sigspoof-core sigspoof-core
 
-    cp -r "$gen"/sigspoof-ui-global-4.1-6.0 sigspoof-ui-global-4.1-6.0
-    cp -r "$gen"/sigspoof-ui-global-7.0-8.1 sigspoof-ui-global-8.0-8.1
+    cp -r "$gen"/sigspoof-ui-global-4.1-9.0 sigspoof-ui-global-9.0
+    generate_one '9.0' sigspoof-ui-global-9.0 sigspoof-ui-global-8.0-8.1
     generate_one '8.0' sigspoof-ui-global-8.0-8.1 sigspoof-ui-global-7.0-7.1
-    cp -r "$gen"/sigspoof-ui-global-9.0 sigspoof-ui-global-9.0
+    generate_one '7.0' sigspoof-ui-global-7.0-7.1 sigspoof-ui-global-4.1-6.0
 
 }
 

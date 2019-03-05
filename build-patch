@@ -2,6 +2,8 @@
 
 set -e
 
+shopt -s nullglob
+
 base_suffix=.
 source "$(dirname "$(readlink -f "$0")")/$base_suffix/.global"
 
@@ -78,7 +80,7 @@ build_patch_part() {
 
 }
 
-for part in "$patch_source_dir"/*; do
+for part in "$patch_source_dir"/*.{jar,apk}; do
     build_patch_part "$(basename "$part")"
 done
 
