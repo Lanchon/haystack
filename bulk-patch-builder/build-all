@@ -111,6 +111,12 @@ build_all() {
 
     shopt -s nullglob
 
+    if [[ "$1" == "--quick" || "$1" == "-q" ]]; then
+        local quick=1
+    else
+        local quick=0
+    fi
+
     tmp_dir="$patches_dex_dir/tmp-dir"
     mkdir "$tmp_dir"
     echo "*" >"$tmp_dir/.gitignore"
@@ -153,17 +159,30 @@ build_all() {
 
     # Build the hook patches
 
-    build_and_apply_one sigspoof-hook-1.5-2.3 "$filesets_dir"/{0[3-9],10}-*
-    build_and_apply_one sigspoof-hook-4.0     "$filesets_dir"/1[4-5]-*
-    build_and_apply_one sigspoof-hook-4.1-6.0 "$filesets_dir"/{1[6-9],2[1-3]}-*
-    build_and_apply_one sigspoof-hook-7.0-9.0 "$filesets_dir"/2[4-8]-*
+    if (( quick )); then
+        build_and_apply_one sigspoof-hook-1.5-2.3 "$filesets_dir"/10-*
+        build_one           sigspoof-hook-4.0     "$filesets_dir"/15-*
+        build_and_apply_one sigspoof-hook-4.1-6.0 "$filesets_dir"/16-*
+        build_one           sigspoof-hook-7.0-9.0 "$filesets_dir"/24-*
+                  apply_one sigspoof-hook-7.0-9.0 "$filesets_dir"/2{4,6,8}-*
+    else
+        build_and_apply_one sigspoof-hook-1.5-2.3 "$filesets_dir"/{0[3-9],10}-*
+        build_and_apply_one sigspoof-hook-4.0     "$filesets_dir"/1[4-5]-*
+        build_and_apply_one sigspoof-hook-4.1-6.0 "$filesets_dir"/{1[6-9],2[1-3]}-*
+        build_and_apply_one sigspoof-hook-7.0-9.0 "$filesets_dir"/2[4-8]-*
+    fi
 
     # Build the core patch
 
-    # Avoid building the core patch on Android 9.0 (Workaround for https://github.com/Lanchon/haystack/issues/23)
-    #build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
-    build_one sigspoof-core "$tmp_dir"/sigspoof-hook-{{1.5-2.3,4.0,4.1-6.0}__fs/*,7.0-9.0__fs/2[4-7]-*}
-    apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
+    if (( quick )); then
+        build_one           sigspoof-core "$tmp_dir"/sigspoof-hook-1.5-2.3__fs/10-*
+        apply_one           sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
+    else
+        # Avoid building the core patch on Android 9.0 (Workaround for https://github.com/Lanchon/haystack/issues/23)
+        #build_and_apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
+        build_one           sigspoof-core "$tmp_dir"/sigspoof-hook-{{1.5-2.3,4.0,4.1-6.0}__fs/*,7.0-9.0__fs/2[4-7]-*}
+                  apply_one sigspoof-core "$tmp_dir"/sigspoof-hook-{1.5-2.3,4.0,4.1-6.0,7.0-9.0}__fs/*
+    fi
 
     # Build the UI patches
 
