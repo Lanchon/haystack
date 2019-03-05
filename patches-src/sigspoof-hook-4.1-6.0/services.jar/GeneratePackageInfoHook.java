@@ -1,5 +1,11 @@
 /*
- * Copyright (C) 2016 Lanchon <https://github.com/Lanchon>
+ * Copyright (C) 2015 Marvin W <https://github.com/mar-v-in>
+ * Copyright (C) 2016-2019 Lanchon <https://github.com/Lanchon>
+ *
+ * Based on Marvin's work:
+ *
+ *      https://gerrit.omnirom.org/#/c/14898/
+ *      https://gerrit.omnirom.org/#/c/14899/
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

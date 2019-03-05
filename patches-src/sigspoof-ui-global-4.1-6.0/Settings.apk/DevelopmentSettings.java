@@ -1,8 +1,8 @@
 /*
  * Copyright (C) 2015 Marvin W <https://github.com/mar-v-in>
- * Copyright (C) 2016 Lanchon <https://github.com/Lanchon>
+ * Copyright (C) 2016-2019 Lanchon <https://github.com/Lanchon>
  *
- * This is Marvin's work converted to DexPatcher patches by Lanchon.
+ * Based on Marvin's work:
  *
  *      https://gerrit.omnirom.org/#/c/14898/
  *      https://gerrit.omnirom.org/#/c/14899/
