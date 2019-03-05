@@ -84,4 +84,4 @@ generate_all() {
 
 }
 
-generate_all
+generate_all "$@"
