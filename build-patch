@@ -72,7 +72,7 @@ build_patch_part() {
         -source "$java_version" -target "$java_version" \
         -d "$classes_dir" \
         -g:none \
-        "$source_dir"/*.java
+        "$source_dir"{,"("[!"<>"]*")"}/*.java
 
     patch_dex="$patch_build_dir/${name}.dex"
 
