@@ -1135,199 +1135,205 @@ deleting: classes.dex
 *** patch-fileset: success
 
 
-********* BUILD: sigspoof-ui-global-4.1-6.0
+********* BUILD: sigspoof-ui-global-4.1-5.0
 
-****** build: sigspoof-ui-global-4.1-6.0
+****** build: sigspoof-ui-global-4.1-5.0
 ****** against: 16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 16 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-****** build: sigspoof-ui-global-4.1-6.0
+****** build: sigspoof-ui-global-4.1-5.0
 ****** against: 17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 17 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__17-4.2.2-cm-10.1.3-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-****** build: sigspoof-ui-global-4.1-6.0
+****** build: sigspoof-ui-global-4.1-5.0
 ****** against: 18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 18 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__18-4.3.1-cm-10.2.1-mako__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-****** build: sigspoof-ui-global-4.1-6.0
+****** build: sigspoof-ui-global-4.1-5.0
 ****** against: 19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 19 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__19-4.4.4-cm-11-20150901-SNAPSHOT-XNG3CAO3G0-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-****** build: sigspoof-ui-global-4.1-6.0
+****** build: sigspoof-ui-global-4.1-5.0
 ****** against: 21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-5.0/sigspoof-ui-global-4.1-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-****** build: sigspoof-ui-global-4.1-6.0
+********* PUBLISH: sigspoof-ui-global-4.1-5.0
+********* BUILT AGAINST: 16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core
+
+
+********* BUILD: sigspoof-ui-global-5.1-6.0
+
+****** build: sigspoof-ui-global-5.1-6.0
 ****** against: 22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-****** build: sigspoof-ui-global-4.1-6.0
+****** build: sigspoof-ui-global-5.1-6.0
 ****** against: 23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 
->>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> build patch: services.jar
 >>> build patch: Settings.apk
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
 info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.1-6.0/sigspoof-ui-global-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 
 *** patch-fileset: success
 *** build-patch: success
 
-********* PUBLISH: sigspoof-ui-global-4.1-6.0
-********* BUILT AGAINST: 16-4.1.2-cm-10.0.0-maguro__sigspoof-hook-4.1-6.0__sigspoof-core
+********* PUBLISH: sigspoof-ui-global-5.1-6.0
+********* BUILT AGAINST: 22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 
 
 ********* BUILD: sigspoof-ui-global-7.0-7.1
