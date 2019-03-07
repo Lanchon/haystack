@@ -45,7 +45,7 @@ public abstract class DevelopmentSettingsDashboardFragment extends RestrictedDas
     @Override
     public void addPreferencesFromResource(@XmlRes int preferencesResId) {
         super.addPreferencesFromResource(preferencesResId);
-        FakeSignatureGlobalPreferenceController.addPreferences(this);
+        FakeSignatureGlobalUI.addPreference(this);
     }
 
     @DexWrap

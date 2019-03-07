@@ -24,13 +24,9 @@ package com.android.settings.development;
 
 import android.content.Context;
 import android.os.UserManager;
-import android.provider.Settings;
-import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
-import android.util.Log;
 
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
@@ -45,25 +41,6 @@ class FakeSignatureGlobalPreferenceController extends DeveloperOptionsPreference
 
     private static final boolean RESET_IF_DEVELOPER_OPTIONS_DISABLED = false;
 
-    static void addPreferences(PreferenceFragment fragment) {
-        try {
-            String categoryKey = FakeSignatureGlobalUI.PREFERENCE_CATEGORY_KEY;
-            PreferenceGroup pg = (PreferenceGroup) fragment.findPreference(categoryKey);
-            if (pg != null) {
-                SwitchPreference p = new SwitchPreference(pg.getContext());
-                p.setKey(FakeSignatureGlobalUI.PREFERENCE_KEY);
-                p.setTitle(FakeSignatureGlobalUI.PREFERENCE_TITLE);
-                p.setSummary(FakeSignatureGlobalUI.PREFERENCE_SUMMARY);
-                p.setPersistent(false);
-                pg.addPreference(p);
-            } else {
-                Log.e("DevelopmentSettingsDashboardFragment_FakeSignatureGlobalUI", "cannot find '" + categoryKey +"' preference category");
-            }
-        } catch (Throwable t) {
-            Log.e("FakeSignatureGlobalPreferenceController", "addPreferences exception", t);
-        }
-    }
-
     private final DevelopmentSettingsDashboardFragment mFragment;
 
     FakeSignatureGlobalPreferenceController(Context context, DevelopmentSettingsDashboardFragment fragment) {
@@ -73,12 +50,12 @@ class FakeSignatureGlobalPreferenceController extends DeveloperOptionsPreference
 
     @Override
     public String getPreferenceKey() {
-        return FakeSignatureGlobalUI.PREFERENCE_KEY;
+        return FakeSignatureGlobalUI.getPreferenceKey();
     }
 
     @Override
     public void updateState(Preference preference) {
-        writeUI(readSetting());
+        updatePreference();
     }
 
     @Override
@@ -90,12 +67,8 @@ class FakeSignatureGlobalPreferenceController extends DeveloperOptionsPreference
     // Show warning dialog if needed
 
     private void writeSettingWithWarningDialog(boolean newValue) {
-        if (SHOW_WARNING_DIALOG) {
-            if (newValue) {
-                FakeSignatureGlobalWarningDialog.show(mFragment);
-            } else {
-                writeSetting(false);
-            }
+        if (SHOW_WARNING_DIALOG && newValue) {
+            FakeSignatureGlobalWarningDialog.show(mFragment);
         } else {
             writeSetting(newValue);
         }
@@ -107,24 +80,8 @@ class FakeSignatureGlobalPreferenceController extends DeveloperOptionsPreference
 
     void onFakeSignatureGlobalDialogDismissed() {
         if (mFragment.getActivity() != null) {
-            writeUI(readSetting());
+            updatePreference();
         }
-    }
-
-    // Set the UI state
-
-    private void writeUI(boolean newValue) {
-        ((SwitchPreference) mPreference).setChecked(newValue);
-    }
-
-    // Read and write the setting
-
-    private boolean readSetting() {
-        return Settings.Secure.getInt(mFragment.getActivity().getContentResolver(), FakeSignatureGlobalUI.SECURE_SETTING_KEY, 0) != 0;
-    }
-
-    private void writeSetting(boolean newValue) {
-        Settings.Secure.putInt(mFragment.getActivity().getContentResolver(), FakeSignatureGlobalUI.SECURE_SETTING_KEY, newValue ? 1 : 0);
     }
 
     // Hide if non-admin user
@@ -158,8 +115,18 @@ class FakeSignatureGlobalPreferenceController extends DeveloperOptionsPreference
         super.onDeveloperOptionsSwitchDisabled();
         if (RESET_IF_DEVELOPER_OPTIONS_DISABLED && !((HIDE_IF_NON_ADMIN_USER || DISABLE_IF_NON_ADMIN_USER) && !isAdminUser())) {
             writeSetting(false);
-            writeUI(false);
+            updatePreference();
         }
+    }
+
+    // Convenience methods
+
+    private void writeSetting(boolean newValue) {
+        FakeSignatureGlobalSetting.write(mFragment.getActivity(), newValue);
+    }
+
+    private void updatePreference() {
+        ((SwitchPreference) mPreference).setChecked(FakeSignatureGlobalSetting.read(mFragment.getActivity()));
     }
 
     private boolean isAdminUser() {

@@ -22,7 +22,6 @@
 
 package com.android.settings.development;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -47,13 +46,7 @@ public class FakeSignatureGlobalWarningDialog extends ObservableDialogFragment
 
     @Override
     public Dialog onCreateDialog(Bundle icicle) {
-        return new AlertDialog.Builder(getActivity())
-                .setTitle(FakeSignatureGlobalUI.WARNING_TITLE)
-                .setMessage(FakeSignatureGlobalUI.WARNING_MESSAGE)
-                //.setIconAttribute(android.R.attr.alertDialogIcon)
-                .setPositiveButton(android.R.string.yes, this)
-                .setNegativeButton(android.R.string.no, this)
-                .create();
+        return FakeSignatureGlobalUI.createWarningDialog(getActivity(), this);
     }
 
     @Override
