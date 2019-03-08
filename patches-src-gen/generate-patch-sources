@@ -44,16 +44,13 @@ transform_dir() {
     local cutoff="$1"
     local dir="$2"
 
-    for file in "$dir"/**/*"(<$cutoff)"; do
-        rm -rf "${file%"(<$cutoff)"}"
-        mv -T "$file" "${file%"(<$cutoff)"}"
-    done
-
     transform_files "$cutoff" "$dir"/**/*".java"{,"("*")"}
 
 }
 
-generate_one() {
+generate_split() {
+
+    shopt -s nullglob globstar
 
     local cutoff="$1"
     local source="$2"
@@ -61,7 +58,27 @@ generate_one() {
 
     cp -r "$source" "$target"
     
+    for file in "$target"/**/*"(<$cutoff)"; do
+        rm -rf "${file%"(<$cutoff)"}"
+        mv -T "$file" "${file%"(<$cutoff)"}"
+    done
+
     transform_dir "$cutoff" "$target"
+
+}
+
+generate_highest() {
+
+    shopt -s nullglob globstar
+
+    local gen_source="$1"
+    local target="$2"
+
+    cp -r "$gen_source" "$target"
+
+    for file in "$target"/**/*"(>"*")"; do
+        mv -Tn "$file" "${file%"(>"*")"}"
+    done
 
 }
 
@@ -70,18 +87,18 @@ generate_all() {
     cd "$patches_source_dir"
     local gen="$generator_base_dir"
 
-    cp -r "$gen"/sigspoof-hook sigspoof-hook-7.0-9.0
-    generate_one '7.0' sigspoof-hook-7.0-9.0 sigspoof-hook-4.1-6.0
-    generate_one '4.1' sigspoof-hook-4.1-6.0 sigspoof-hook-4.0
-    generate_one '4.0' sigspoof-hook-4.0 sigspoof-hook-1.5-2.3
+    generate_highest "$gen"/sigspoof-hook sigspoof-hook-7.0-9.0
+    generate_split '7.0' sigspoof-hook-7.0-9.0 sigspoof-hook-4.1-6.0
+    generate_split '4.1' sigspoof-hook-4.1-6.0 sigspoof-hook-4.0
+    generate_split '4.0' sigspoof-hook-4.0 sigspoof-hook-1.5-2.3
 
-    cp -r "$gen"/sigspoof-core sigspoof-core
+    generate_highest "$gen"/sigspoof-core sigspoof-core
 
-    cp -r "$gen"/sigspoof-ui-global-4.1-9.0 sigspoof-ui-global-9.0
-    generate_one '9.0' sigspoof-ui-global-9.0 sigspoof-ui-global-8.0-8.1
-    generate_one '8.0' sigspoof-ui-global-8.0-8.1 sigspoof-ui-global-7.0-7.1
-    generate_one '7.0' sigspoof-ui-global-7.0-7.1 sigspoof-ui-global-5.1-6.0
-    generate_one '5.1' sigspoof-ui-global-5.1-6.0 sigspoof-ui-global-4.1-5.0
+    generate_highest "$gen"/sigspoof-ui-global-4.1-9.0 sigspoof-ui-global-9.0
+    generate_split '9.0' sigspoof-ui-global-9.0 sigspoof-ui-global-8.0-8.1
+    generate_split '8.0' sigspoof-ui-global-8.0-8.1 sigspoof-ui-global-7.0-7.1
+    generate_split '7.0' sigspoof-ui-global-7.0-7.1 sigspoof-ui-global-5.1-6.0
+    generate_split '5.1' sigspoof-ui-global-5.1-6.0 sigspoof-ui-global-4.1-5.0
 
 }
 
