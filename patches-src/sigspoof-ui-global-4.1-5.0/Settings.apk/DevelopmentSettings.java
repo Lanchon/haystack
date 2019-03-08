@@ -20,205 +20,144 @@
  * limitations under the License.
  */
 
-package com.android.settings;
+/*<8.0*/ package com.android.settings;
+//>8.0// package com.android.settings.development;
 
 import java.util.ArrayList;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.os.Build;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
-import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
-import android.preference.TwoStatePreference;
-import android.provider.Settings;
-import android.util.Log;
+/*<7.0*/ import android.preference.Preference;
+//>7.0// import android.support.v7.preference.Preference;
+/*<7.0*/ import android.preference.PreferenceFragment;
+//>7.0// import android.support.v14.preference.PreferenceFragment;
+/*<7.0*/ import android.preference.PreferenceScreen;
+/*<5.1*/ import android.preference.CheckBoxPreference;
+//>5.1// /*<7.0*/ import android.preference.SwitchPreference;
+//>7.0// import android.support.v14.preference.SwitchPreference;
+
+//>8.0// import com.android.settings.Utils;
 
 import lanchon.dexpatcher.annotation.*;
 
 @DexEdit(contentOnly = true)
 public class DevelopmentSettings extends PreferenceFragment {
 
-    // SwitchPreference Hooks
+    @DexAdd private static final boolean SHOW_WARNING_DIALOG = true;
 
-    @DexIgnore private final ArrayList<SwitchPreference> mResetSwitchPrefs = new ArrayList<SwitchPreference>();
-    @DexIgnore void updateSwitchPreference(SwitchPreference switchPreference, boolean value) { throw null; }
+    @DexAdd private static final boolean RESET_IF_DEVELOPER_OPTIONS_DISABLED = false;
 
-    // CheckBoxPreference Hooks
+    @DexIgnore private /* final */ ArrayList<Preference> mAllPrefs;
+    /*<5.1*/ @DexIgnore private /* final */ ArrayList<CheckBoxPreference> mResetCbPrefs;
+    //>5.1// @DexIgnore private /* final */ ArrayList<SwitchPreference> mResetSwitchPrefs;
 
-    @DexIgnore private final ArrayList<CheckBoxPreference> mResetCbPrefs = new ArrayList<CheckBoxPreference>();
-    @DexIgnore void updateCheckBox(CheckBoxPreference checkBox, boolean value) { throw null; }
+    /*<5.1*/ @DexAdd private CheckBoxPreference mFakeSignatureGlobalPreference;
+    //>5.1// @DexAdd private SwitchPreference mFakeSignatureGlobalPreference;
+    @DexAdd /* private */ AlertDialog mFakeSignatureGlobalDialog;
 
-    // TwoStatePreference Interface
+    @DexIgnore private DevelopmentSettings() { throw null; }
 
-    @DexAdd
-    private boolean useSwitchPreference() {
-        return Build.VERSION.SDK_INT >= 22;     // Build.VERSION_CODES.LOLLIPOP_MR1
-    }
-
-    @DexAdd
-    private TwoStatePreference createTwoStatePreference(Context context) {
-        if (useSwitchPreference()) {
-            return new SwitchPreference(context);
-        } else {
-            return new CheckBoxPreference(context);
-        }
-    }
-
-    @DexAdd
-    private boolean mResetTwoStatePrefsAdd(TwoStatePreference preference) {
-        if (useSwitchPreference()) {
-            return mResetSwitchPrefs.add((SwitchPreference) preference);
-        } else {
-            return mResetCbPrefs.add((CheckBoxPreference) preference);
-        }
-    }
-
-    @DexAdd
-    private void updateTwoStatePreference(TwoStatePreference preference, boolean value) {
-        if (useSwitchPreference()) {
-            updateSwitchPreference((SwitchPreference) preference, value);
-        } else {
-            updateCheckBox((CheckBoxPreference) preference, value);
-        }
-    }
-
-    @DexAdd
-    static class FakeSignatureGlobalUI {
-
-        static final String DEBUG_APPLICATIONS_CATEGORY_KEY = "debug_applications_category";
-
-        static final String SETTING_SECURE_KEY = "allow_fake_signature_global";
-
-        static final String SETTING_TITLE =
-                "Allow signature spoofing";
-        static final String SETTING_SUMMARY =
-                //"Allow apps to bypass security systems by pretending to be a different app";
-                //"Allow apps to spoof information about their publisher";
-                "Allow apps to impersonate other apps";
-        static final String SETTING_WARNING =
-                //"Allowing apps to bypass security systems can lead to serious security and privacy problems! " +
-                //"Check that only benign apps use the corresponding permission when this is active.";
-                "Allowing apps to impersonate other apps has security and privacy implications. " +
-                "Malicious apps can use this functionality to access the private data of other apps.\n\n" +
-                "Make sure that you trust all installed apps that use the 'FAKE_PACKAGE_SIGNATURE' " +
-                "permission before enabling this setting.";
-
-    }
-
-    @DexIgnore private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
-
-    @DexAdd private TwoStatePreference mAllowFakeSignatureGlobal;
-    @DexAdd /* private */ Dialog mAllowFakeSignatureGlobalDialog;
-
-    @DexIgnore
-    private DevelopmentSettings() { throw null; }
+    //>7.0// @DexIgnore @Override public void onCreatePreferences(Bundle savedInstanceState, String rootKey) { throw null; }
+    /*<5.1*/ @DexIgnore void updateCheckBox(CheckBoxPreference checkBox, boolean value) { throw null; }
+    //>5.1// @DexIgnore void updateSwitchPreference(SwitchPreference switchPreference, boolean value) { throw null; }
 
     @DexAppend
     @Override
     public void onCreate(Bundle icicle) {
-        try {
-            PreferenceGroup pg = (PreferenceGroup) findPreference(
-                    FakeSignatureGlobalUI.DEBUG_APPLICATIONS_CATEGORY_KEY);
-            if (pg != null) {
-                TwoStatePreference p = createTwoStatePreference(pg.getContext());
-                p.setKey(FakeSignatureGlobalUI.SETTING_SECURE_KEY);
-                p.setTitle(FakeSignatureGlobalUI.SETTING_TITLE);
-                p.setSummary(FakeSignatureGlobalUI.SETTING_SUMMARY);
-                p.setPersistent(false);
-                mResetTwoStatePrefsAdd(p);
+        // The 'current user is owner' check is only needed on Android versions earlier than 4.3.
+        // Versions 4.3 through 8.1 disable the development options completely when appropriate.
+        //if (android.os.Process.myUserHandle().getIdentifier() == android.os.UserHandle.USER_OWNER) {
+            /*<5.1*/ CheckBoxPreference p = FakeSignatureGlobalUI.addPreference(this);
+            //>5.1// SwitchPreference p = FakeSignatureGlobalUI.addPreference(this);
+            if (p != null) {
+                mFakeSignatureGlobalPreference = p;
                 mAllPrefs.add(p);
-                //pg.setOrderingAsAdded(true);
-                pg.addPreference(p);
-                mAllowFakeSignatureGlobal = p;
-            } else {
-                Log.e("DevelopmentSettings_FakeSignatureGlobalUI", "cannot find 'applications' preference category");
+                /*<5.1*/ if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetCbPrefs.add(p);
+                //>5.1// if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetSwitchPrefs.add(p);
             }
-        } catch (Throwable t) {
-            Log.e("DevelopmentSettings_FakeSignatureGlobalUI", "onCreate exception", t);
-        }
+        //}
     }
 
     @DexAppend
     private void updateAllOptions() {
-        if (mAllowFakeSignatureGlobal != null) {
-            updateAllowFakeSignatureGlobalOption();
-        }
-    }
-
-    @DexAdd
-    /* private */ void updateAllowFakeSignatureGlobalOption() {
-        boolean value = Settings.Secure.getInt(getActivity().getContentResolver(),
-                FakeSignatureGlobalUI.SETTING_SECURE_KEY, 0) != 0;
-        updateTwoStatePreference(mAllowFakeSignatureGlobal, value);
-    }
-
-    @DexWrap
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (Utils.isMonkeyRunning()) {
-            return false;
-        }
-        if (mAllowFakeSignatureGlobal != null) {
-            if (preference == mAllowFakeSignatureGlobal) {
-                writeAllowFakeSignatureGlobalOption();
-                return false;
-            }
-        }
-        return onPreferenceTreeClick(preferenceScreen, preference);
-    }
-
-    @DexAdd
-    private void writeAllowFakeSignatureGlobalOption() {
-        if (mAllowFakeSignatureGlobal.isChecked()) {
-            if (mAllowFakeSignatureGlobalDialog != null) {
-                dismissDialogs();
-            }
-            @DexAdd
-            class Listener implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    if (which == DialogInterface.BUTTON_POSITIVE) {
-                        Settings.Secure.putInt(getActivity().getContentResolver(),
-                                FakeSignatureGlobalUI.SETTING_SECURE_KEY, 1);
-                    }
-                    //updateAllowFakeSignatureGlobalOption();   // handled by onDismiss(...)
-                }
-                @Override
-                public void onDismiss(DialogInterface dialog) {
-                    updateAllowFakeSignatureGlobalOption();
-                    mAllowFakeSignatureGlobalDialog = null;
-                }
-            }
-            Listener listener = new Listener();
-            mAllowFakeSignatureGlobalDialog = new AlertDialog.Builder(getActivity())
-                    .setMessage(FakeSignatureGlobalUI.SETTING_WARNING)
-                    .setTitle(FakeSignatureGlobalUI.SETTING_TITLE)
-                    .setIconAttribute(android.R.attr.alertDialogIcon)
-                    .setPositiveButton(android.R.string.yes, listener)
-                    .setNegativeButton(android.R.string.no, listener)
-                    .create();
-            mAllowFakeSignatureGlobalDialog.setOnDismissListener(listener);
-            mAllowFakeSignatureGlobalDialog.show();
-        } else {
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    FakeSignatureGlobalUI.SETTING_SECURE_KEY, 0);
-            updateAllowFakeSignatureGlobalOption();
+        if (mFakeSignatureGlobalPreference != null) {
+            updateFakeSignatureGlobalPreference();
         }
     }
 
     @DexAppend
     private void dismissDialogs() {
-        if (mAllowFakeSignatureGlobalDialog != null) {
-            mAllowFakeSignatureGlobalDialog.dismiss();
-            mAllowFakeSignatureGlobalDialog = null;
+        if (mFakeSignatureGlobalDialog != null) {
+            mFakeSignatureGlobalDialog.dismiss();
+            mFakeSignatureGlobalDialog = null;
         }
+    }
+
+    @DexWrap
+    @Override
+    /*<7.0*/ public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+    //>7.0// public boolean onPreferenceTreeClick(Preference preference) {
+        if (Utils.isMonkeyRunning()) {
+            return false;
+        }
+        if (mFakeSignatureGlobalPreference != null) {
+            if (preference == mFakeSignatureGlobalPreference) {
+                writeFakeSignatureGlobalSettingWithWarningDialog(mFakeSignatureGlobalPreference.isChecked());
+                return false;
+            }
+        }
+        /*<7.0*/ return onPreferenceTreeClick(preferenceScreen, preference);
+        //>7.0// return onPreferenceTreeClick(preference);
+    }
+
+    @DexAdd
+    private void writeFakeSignatureGlobalSettingWithWarningDialog(boolean newValue) {
+        if (SHOW_WARNING_DIALOG && newValue) {
+            if (mFakeSignatureGlobalDialog != null) {
+                dismissDialogs();
+            }
+            FakeSignatureGlobalDialogListener listener = new FakeSignatureGlobalDialogListener();
+            mFakeSignatureGlobalDialog = FakeSignatureGlobalUI.createWarningDialog(getActivity(), listener);
+            mFakeSignatureGlobalDialog.setOnDismissListener(listener);
+            mFakeSignatureGlobalDialog.show();
+        } else {
+            writeFakeSignatureGlobalSetting(newValue);
+            updateFakeSignatureGlobalPreference();
+        }
+    }
+
+    @DexAdd
+    class FakeSignatureGlobalDialogListener
+            implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            if (which == DialogInterface.BUTTON_POSITIVE) {
+                writeFakeSignatureGlobalSetting(true);
+                //updateFakeSignatureGlobalPreference();   // handled by onDismiss(...)
+            }
+        }
+        @Override
+        public void onDismiss(DialogInterface dialog) {
+            if (DevelopmentSettings.this.getActivity() != null) {
+                updateFakeSignatureGlobalPreference();
+            }
+            mFakeSignatureGlobalDialog = null;
+        }
+    }
+
+    // Convenience methods
+
+    @DexAdd
+    /* private */ void writeFakeSignatureGlobalSetting(boolean newValue) {
+        FakeSignatureGlobalSetting.write(getActivity(), newValue);
+    }
+
+    @DexAdd
+    /* private */ void updateFakeSignatureGlobalPreference() {
+        /*<5.1*/ updateCheckBox(mFakeSignatureGlobalPreference, FakeSignatureGlobalSetting.read(getActivity()));
+        //>5.1// updateSwitchPreference(mFakeSignatureGlobalPreference, FakeSignatureGlobalSetting.read(getActivity()));
     }
 
 }

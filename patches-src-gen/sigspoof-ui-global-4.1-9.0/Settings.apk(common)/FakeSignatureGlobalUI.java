@@ -26,9 +26,13 @@
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.PreferenceGroup;
+//<7.0// import android.preference.PreferenceFragment;
+/*>7.0*/ import android.support.v14.preference.PreferenceFragment;
+//<7.0// import android.preference.PreferenceGroup;
+/*>7.0*/ import android.support.v7.preference.PreferenceGroup;
+//<5.1// import android.preference.CheckBoxPreference;
+/*>5.1*/ //<7.0// import android.preference.SwitchPreference;
+/*>7.0*/ import android.support.v14.preference.SwitchPreference;
 import android.util.Log;
 
 abstract class FakeSignatureGlobalUI {
@@ -51,14 +55,16 @@ abstract class FakeSignatureGlobalUI {
             "Make sure that you trust all installed apps that use the 'FAKE_PACKAGE_SIGNATURE' " +
             "permission before enabling this setting.";
 
-    static String getPreferenceKey() {
-        return PREFERENCE_KEY;
-    }
+    /*>9.0*/ static String getPreferenceKey() {
+    /*>9.0*/     return PREFERENCE_KEY;
+    /*>9.0*/ }
 
-    static SwitchPreference addPreference(PreferenceFragment fragment) {
+    //<5.1// static CheckBoxPreference addPreference(PreferenceFragment fragment) {
+    /*>5.1*/ static SwitchPreference addPreference(PreferenceFragment fragment) {
         PreferenceGroup pg = (PreferenceGroup) fragment.findPreference(PREFERENCE_CATEGORY_KEY);
         if (pg != null) {
-            SwitchPreference p = new SwitchPreference(pg.getContext());
+            //<5.1// CheckBoxPreference p = new CheckBoxPreference(pg.getContext());
+            /*>5.1*/ SwitchPreference p = new SwitchPreference(pg.getContext());
             p.setKey(PREFERENCE_KEY);
             p.setTitle(PREFERENCE_TITLE);
             p.setSummary(PREFERENCE_SUMMARY);
