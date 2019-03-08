@@ -43,14 +43,13 @@ Requirements:
 - Bash shell. (If you use Windows (dear mother of god!) read [this](https://msdn.microsoft.com/en-us/commandline/wsl/about).)
 - Working adb.
 - And to build the patches:
-  - Java SDK (for **javac**).
-  - Android SDK (for **dx**).
+  - Java SE Development Kit (JDK/OpenJDK) 8.
 
 Because of feature creep, Haystack is not as simple as the patch linked above. It is broken up in layers to avoid code duplication and to give you choices of what to apply.
 
 - Hooks (required): these are simple adapters to hook all versions of Android from 1.5 Cupcake to 9.0 Pie. (See [patch source](https://github.com/Lanchon/haystack/tree/master/patches-src-gen/sigspoof-hook).)
 - Core (required): this is the main code of the patch that spoofs signatures based on metadata in the application manifest. Other cores that obtain fake signatures from different sources might follow up later; the need to modify an app's manifest to spoof its signature is not ideal in some situations. (See [patch source](https://github.com/Lanchon/haystack/tree/master/patches-src-gen/sigspoof-core).)
-- UI (optional): these patches add a global signature spoofing enable/disable switch to the application section in developer settings. Other UIs could be implemented in the future, such as a per-app setting using Android 6.0's runtime permissions, or a per-app setting for all semi-recent CyanogenMod roms using their Privacy Guard framework. (See [patch source](https://github.com/Lanchon/haystack/tree/master/patches-src-gen/sigspoof-ui-global).)
+- UI (optional): these patches add a global signature spoofing enable/disable switch to the 'Apps' section in the 'Developer options' page of the device settings. They support Android versions from 4.0 ICS to 9.0 Pie. Other UIs could be implemented in the future, such as a per-app setting using the runtime permission model introduced in Android 6.0 or the Privacy Guard framework of CyanogenMod/LineageOS-based roms. (See [patch source](https://github.com/Lanchon/haystack/tree/master/patches-src-gen/sigspoof-ui-global).)
 
 Haystack is based on the concepts of filesets and patches. Filesets are groups of files that are typically pulled from a device to be operated upon (patched) and later pushed back to the same device. Haystack patches are sets of DexPatcher patches applied as a single unit to one or more files of a fileset. Haystack includes bash scripts to apply [binary patches](https://github.com/Lanchon/haystack/tree/master/patches) that do most of the work for you:
 
