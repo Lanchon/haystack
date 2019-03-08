@@ -179,7 +179,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex
+>>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar.dex'
@@ -198,7 +198,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex
+>>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar.dex'
@@ -217,7 +217,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0/sigspoof-hook-4.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar.dex'
@@ -311,7 +311,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 21 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex'
@@ -320,9 +320,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -332,7 +329,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 22 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex'
@@ -341,9 +338,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -353,7 +347,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-4.1-6.0/services.jar.dex'
@@ -362,9 +356,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -380,7 +371,7 @@ deleting: classes.dex
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar.dex'
@@ -399,7 +390,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar.dex'
@@ -418,7 +409,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar.dex
+>>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar.dex'
@@ -437,7 +428,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar.dex
+>>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar.dex'
@@ -456,7 +447,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar.dex
+>>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0/sigspoof-hook-7.0-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar.dex'
@@ -478,7 +469,7 @@ info: dry run due to '--dry-run' option
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -487,9 +478,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -499,7 +487,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -508,9 +496,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -520,7 +505,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 26 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 26 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -529,9 +514,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -541,7 +523,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 27 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 27 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -550,9 +532,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -562,7 +541,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 28 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/filesets/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 28 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/filesets/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/filesets/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -571,9 +550,6 @@ info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-di
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -703,7 +679,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar.dex'
@@ -722,7 +698,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
@@ -741,7 +717,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar.dex'
@@ -760,7 +736,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -779,7 +755,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -798,7 +774,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -817,7 +793,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar.dex
+>>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core/sigspoof-core__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar.dex'
@@ -947,7 +923,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 21 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -955,13 +931,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -971,7 +941,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 22 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -979,13 +949,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -995,7 +959,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-4.1-6.0__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -1003,13 +967,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -1019,7 +977,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 24 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -1027,13 +985,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -1043,7 +995,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 25 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -1051,13 +1003,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -1067,7 +1013,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 26 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 26 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -1075,13 +1021,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -1091,7 +1031,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 27 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 27 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -1099,13 +1039,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -1115,7 +1049,7 @@ deleting: classes.dex
 
 >>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core
 >>> apply patch: services.jar
->>> dexpatcher --api-level 28 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 28 --verbose --output /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-hook-7.0-9.0__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/sigspoof-core/services.jar.dex'
@@ -1123,13 +1057,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: write '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
-deleting: classes2.dex
-deleting: classes3.dex
-deleting: classes4.dex
 deleting: classes.dex
-  adding: classes2.dex (stored 0%)
-  adding: classes3.dex (stored 0%)
-  adding: classes4.dex (stored 0%)
   adding: classes.dex (stored 0%)
 
 *** patch-fileset: success
@@ -1293,7 +1221,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.2-5.0/sigspoof-ui-global-4.2-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.2-5.0/sigspoof-ui-global-4.2-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.2-5.0/sigspoof-ui-global-4.2-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
@@ -1301,7 +1229,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.2-5.0/sigspoof-ui-global-4.2-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 21 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.2-5.0/sigspoof-ui-global-4.2-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.2-5.0/sigspoof-ui-global-4.2-5.0__21-5.0.2-cm-12-20150625-SNAPSHOT-YNG4NAO09M-d801__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
@@ -1326,7 +1254,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
@@ -1334,7 +1262,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 22 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__22-5.1.1-cm-12.1-20150901-SNAPSHOT-YOG4PAO237-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
@@ -1353,7 +1281,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar.dex'
@@ -1361,7 +1289,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 23 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-5.1-6.0/sigspoof-ui-global-5.1-6.0__23-6.0.1-cm-13.0-20160820-SNAPSHOT-ZNH5YAO0J2-hammerhead__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk.dex'
@@ -1386,7 +1314,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex'
@@ -1394,7 +1322,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 24 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__24-7.0-cm-14.0-20161011-UNOFFICIAL-hammerheadcaf-nyyu_tk__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex'
@@ -1413,7 +1341,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex'
@@ -1421,7 +1349,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 25 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-7.0-7.1/sigspoof-ui-global-7.0-7.1__25-7.1-lineage-14.1-20170721-nightly-oneplus3-signed__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex'
@@ -1446,7 +1374,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex'
@@ -1454,7 +1382,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 26 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__26-8.0-lineage-15.0-20170915-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex'
@@ -1473,7 +1401,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex'
@@ -1481,7 +1409,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 27 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-8.0-8.1/sigspoof-ui-global-8.0-8.1__27-8.1-lineage-15.1-20180109-UNOFFICIAL-falcon-carlosarriaga__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex'
@@ -1506,7 +1434,7 @@ info: dry run due to '--dry-run' option
 
 *** apply fileset patch (dry-run)
 >>> apply patch: services.jar
->>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
+>>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/services.jar.dex'
@@ -1514,7 +1442,7 @@ info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():voi
 info: dry run due to '--dry-run' option
 0 error(s), 0 warning(s)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex-threaded /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
+>>> dexpatcher --api-level 28 --verbose --dry-run --multi-dex /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex
 DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk'
 info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-9.0/sigspoof-ui-global-9.0__28-9.0-lineage-16.0-20181208-UNOFFICIAL-falcon-allstargaurav__sigspoof-hook-7.0-9.0__sigspoof-core/Settings.apk.dex'

@@ -107,7 +107,7 @@ apply_patch_part() {
     else
 
         if (( "$api_level" >= 21 )); then
-            dexpatcher_options+=( --multi-dex-threaded )
+            dexpatcher_options+=( --multi-dex )
         fi
         run_dexpatcher "${dexpatcher_options[@]}" "$fileset_dir/$name" "$patch_dex_dir/${name}.dex"
 
