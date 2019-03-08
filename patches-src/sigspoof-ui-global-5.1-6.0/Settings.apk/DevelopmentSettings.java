@@ -48,8 +48,8 @@ public class DevelopmentSettings extends PreferenceFragment {
 
     @DexAdd private static final boolean RESET_IF_DEVELOPER_OPTIONS_DISABLED = false;
 
-    @DexIgnore private /* final */ ArrayList<Preference> mAllPrefs;
-    //<5.1// @DexIgnore private /* final */ ArrayList<CheckBoxPreference> mResetCbPrefs;
+    /*>4.1*/ @DexIgnore private /* final */ ArrayList<Preference> mAllPrefs;
+    /*>4.1*/ //<5.1// @DexIgnore private /* final */ ArrayList<CheckBoxPreference> mResetCbPrefs;
     /*>5.1*/ @DexIgnore private /* final */ ArrayList<SwitchPreference> mResetSwitchPrefs;
 
     //<5.1// @DexAdd private CheckBoxPreference mFakeSignatureGlobalPreference;
@@ -60,7 +60,7 @@ public class DevelopmentSettings extends PreferenceFragment {
 
     //>7.0// @DexIgnore @Override public void onCreatePreferences(Bundle savedInstanceState, String rootKey) { throw null; }
     /*>4.2*/ @DexIgnore private void disableForUser(Preference pref) { throw null; }
-    //<5.1// @DexIgnore void updateCheckBox(CheckBoxPreference checkBox, boolean value) { throw null; }
+    /*>4.1*/ //<5.1// @DexIgnore void updateCheckBox(CheckBoxPreference checkBox, boolean value) { throw null; }
     /*>5.1*/ @DexIgnore void updateSwitchPreference(SwitchPreference switchPreference, boolean value) { throw null; }
 
     @DexAppend
@@ -70,23 +70,30 @@ public class DevelopmentSettings extends PreferenceFragment {
         /*>5.1*/ SwitchPreference p = FakeSignatureGlobalUI.addPreference(this);
         if (p != null) {
             mFakeSignatureGlobalPreference = p;
-            mAllPrefs.add(p);
+            /*>4.1*/ mAllPrefs.add(p);
             /*>4.2*/ /*<7.0*/ if (!android.os.Process.myUserHandle().equals(android.os.UserHandle.OWNER)) disableForUser(p); else
             //>7.0// if (!((android.os.UserManager) getActivity().getSystemService(android.content.Context.USER_SERVICE)).isAdminUser()) disableForUser(p); else
-            //<5.1// if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetCbPrefs.add(p);
+            /*>4.1*/ //<5.1// if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetCbPrefs.add(p);
             /*>5.1*/ if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetSwitchPrefs.add(p);
         }
     }
 
-    @DexAppend
-    private void updateAllOptions() {
-        if (mFakeSignatureGlobalPreference != null) {
-            updateFakeSignatureGlobalPreference();
-        }
-    }
+    //<4.1// @DexAppend
+    //<4.1// @Override
+    //<4.1// public void onResume() {
+    //<4.1//     updateFakeSignatureGlobalPreference();
+    //<4.1// }
+
+    /*>4.1*/ @DexAppend
+    /*>4.1*/ private void updateAllOptions() {
+    /*>4.1*/     if (mFakeSignatureGlobalPreference != null) {
+    /*>4.1*/         updateFakeSignatureGlobalPreference();
+    /*>4.1*/     }
+    /*>4.1*/ }
 
     @DexAppend
-    private void dismissDialogs() {
+    //<4.1// private void dismissDialog() {
+    /*>4.1*/ private void dismissDialogs() {
         if (mFakeSignatureGlobalDialog != null) {
             mFakeSignatureGlobalDialog.dismiss();
             mFakeSignatureGlobalDialog = null;
@@ -114,7 +121,8 @@ public class DevelopmentSettings extends PreferenceFragment {
     private void writeFakeSignatureGlobalSettingWithWarningDialog(boolean newValue) {
         if (SHOW_WARNING_DIALOG && newValue) {
             if (mFakeSignatureGlobalDialog != null) {
-                dismissDialogs();
+                //<4.1// dismissDialog();
+                /*>4.1*/ dismissDialogs();
             }
             FakeSignatureGlobalDialogListener listener = new FakeSignatureGlobalDialogListener();
             mFakeSignatureGlobalDialog = FakeSignatureGlobalUI.createWarningDialog(getActivity(), listener);
@@ -154,7 +162,8 @@ public class DevelopmentSettings extends PreferenceFragment {
 
     @DexAdd
     /* private */ void updateFakeSignatureGlobalPreference() {
-        //<5.1// updateCheckBox(mFakeSignatureGlobalPreference, FakeSignatureGlobalSetting.read(getActivity()));
+        //<4.1// mFakeSignatureGlobalPreference.setChecked(FakeSignatureGlobalSetting.read(getActivity()));
+        /*>4.1*/ //<5.1// updateCheckBox(mFakeSignatureGlobalPreference, FakeSignatureGlobalSetting.read(getActivity()));
         /*>5.1*/ updateSwitchPreference(mFakeSignatureGlobalPreference, FakeSignatureGlobalSetting.read(getActivity()));
     }
 

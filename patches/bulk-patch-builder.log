@@ -1135,6 +1135,39 @@ deleting: classes.dex
 *** patch-fileset: success
 
 
+********* BUILD: sigspoof-ui-global-4.0
+
+****** build: sigspoof-ui-global-4.0
+****** against: 15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core
+
+>>> target directory: /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.0/sigspoof-ui-global-4.0__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core
+>>> build patch: services.jar
+>>> build patch: Settings.apk
+
+*** apply fileset patch (dry-run)
+>>> apply patch: services.jar
+>>> dexpatcher --api-level 15 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/services.jar /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.0/sigspoof-ui-global-4.0__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/services.jar.dex
+DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/services.jar'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.0/sigspoof-ui-global-4.0__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/services.jar.dex'
+info: type 'com.android.server.pm.GeneratePackageInfoHook': method '<init>():void': implicit ignore of trivial default constructor
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+>>> apply patch: Settings.apk
+>>> dexpatcher --api-level 15 --verbose --dry-run /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/Settings.apk /home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.0/sigspoof-ui-global-4.0__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/Settings.apk.dex
+DexPatcher version 1.6.2 by Lanchon (https://dexpatcher.github.io/)
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-core__fs/15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/Settings.apk'
+info: read '/home/rod/android/haystack/git/bulk-patch-builder/../patches/tmp-dir/sigspoof-ui-global-4.0/sigspoof-ui-global-4.0__15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core/Settings.apk.dex'
+info: dry run due to '--dry-run' option
+0 error(s), 0 warning(s)
+
+*** patch-fileset: success
+*** build-patch: success
+
+********* PUBLISH: sigspoof-ui-global-4.0
+********* BUILT AGAINST: 15-4.0.4-cm-9.1.0-crespo__sigspoof-hook-4.0__sigspoof-core
+
+
 ********* BUILD: sigspoof-ui-global-4.1
 
 ****** build: sigspoof-ui-global-4.1
