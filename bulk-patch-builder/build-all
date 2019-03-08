@@ -163,7 +163,7 @@ build_all() {
         build_and_apply_one sigspoof-hook-1.5-2.3 "$filesets_dir"/10-*
         build_one           sigspoof-hook-4.0     "$filesets_dir"/15-*
         build_one           sigspoof-hook-4.1-6.0 "$filesets_dir"/16-*
-                  apply_one sigspoof-hook-4.1-6.0 "$filesets_dir"/{16,22}-*
+                  apply_one sigspoof-hook-4.1-6.0 "$filesets_dir"/{16,17,22}-*
         build_one           sigspoof-hook-7.0-9.0 "$filesets_dir"/24-*
                   apply_one sigspoof-hook-7.0-9.0 "$filesets_dir"/2{4,6,8}-*
     else
@@ -187,7 +187,8 @@ build_all() {
 
     # Build the UI patches
 
-    build_one sigspoof-ui-global-4.1-5.0 "$tmp_dir"/sigspoof-core__fs/{1[6-9],21}-*
+    build_one sigspoof-ui-global-4.1     "$tmp_dir"/sigspoof-core__fs/16-*
+    build_one sigspoof-ui-global-4.2-5.0 "$tmp_dir"/sigspoof-core__fs/{1[7-9],21}-*
     build_one sigspoof-ui-global-5.1-6.0 "$tmp_dir"/sigspoof-core__fs/2[2-3]-*
     build_one sigspoof-ui-global-7.0-7.1 "$tmp_dir"/sigspoof-core__fs/2[4-5]-*
     build_one sigspoof-ui-global-8.0-8.1 "$tmp_dir"/sigspoof-core__fs/2[6-7]-*

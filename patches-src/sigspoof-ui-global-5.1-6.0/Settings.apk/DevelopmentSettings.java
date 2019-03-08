@@ -26,7 +26,6 @@
 import java.util.ArrayList;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 /*<7.0*/ import android.preference.Preference;
@@ -60,24 +59,23 @@ public class DevelopmentSettings extends PreferenceFragment {
     @DexIgnore private DevelopmentSettings() { throw null; }
 
     //>7.0// @DexIgnore @Override public void onCreatePreferences(Bundle savedInstanceState, String rootKey) { throw null; }
+    /*>4.2*/ @DexIgnore private void disableForUser(Preference pref) { throw null; }
     //<5.1// @DexIgnore void updateCheckBox(CheckBoxPreference checkBox, boolean value) { throw null; }
     /*>5.1*/ @DexIgnore void updateSwitchPreference(SwitchPreference switchPreference, boolean value) { throw null; }
 
     @DexAppend
     @Override
     public void onCreate(Bundle icicle) {
-        // The 'current user is owner' check is only needed on Android versions earlier than 4.3.
-        // Versions 4.3 through 8.1 disable the development options completely when appropriate.
-        //if (android.os.Process.myUserHandle().getIdentifier() == android.os.UserHandle.USER_OWNER) {
-            //<5.1// CheckBoxPreference p = FakeSignatureGlobalUI.addPreference(this);
-            /*>5.1*/ SwitchPreference p = FakeSignatureGlobalUI.addPreference(this);
-            if (p != null) {
-                mFakeSignatureGlobalPreference = p;
-                mAllPrefs.add(p);
-                //<5.1// if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetCbPrefs.add(p);
-                /*>5.1*/ if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetSwitchPrefs.add(p);
-            }
-        //}
+        //<5.1// CheckBoxPreference p = FakeSignatureGlobalUI.addPreference(this);
+        /*>5.1*/ SwitchPreference p = FakeSignatureGlobalUI.addPreference(this);
+        if (p != null) {
+            mFakeSignatureGlobalPreference = p;
+            mAllPrefs.add(p);
+            /*>4.2*/ /*<7.0*/ if (!android.os.Process.myUserHandle().equals(android.os.UserHandle.OWNER)) disableForUser(p); else
+            //>7.0// if (!((android.os.UserManager) getActivity().getSystemService(android.content.Context.USER_SERVICE)).isAdminUser()) disableForUser(p); else
+            //<5.1// if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetCbPrefs.add(p);
+            /*>5.1*/ if (RESET_IF_DEVELOPER_OPTIONS_DISABLED) mResetSwitchPrefs.add(p);
+        }
     }
 
     @DexAppend
