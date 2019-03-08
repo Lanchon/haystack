@@ -94,7 +94,7 @@ generate_all() {
 
     generate_highest "$gen"/sigspoof-core sigspoof-core
 
-    generate_highest "$gen"/sigspoof-ui-global-4.1-9.0 sigspoof-ui-global-9.0
+    generate_highest "$gen"/sigspoof-ui-global sigspoof-ui-global-9.0
     generate_split '9.0' sigspoof-ui-global-9.0 sigspoof-ui-global-8.0-8.1
     generate_split '8.0' sigspoof-ui-global-8.0-8.1 sigspoof-ui-global-7.0-7.1
     generate_split '7.0' sigspoof-ui-global-7.0-7.1 sigspoof-ui-global-5.1-6.0
