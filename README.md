@@ -48,25 +48,26 @@ Requirements:
 
 Because of feature creep, Haystack is not as simple as the patch linked above. It is broken up in layers to avoid code duplication and to give you choices of what to apply.
 
-- Hooks (required): these are simple adapters to hook all versions of Android from 1.5 Cupcake to 9.0 Pie. (See [patch](https://github.com/Lanchon/haystack/tree/master/patches-src/sigspoof-hook-4.1-6.0/services.jar).)
-- Core (required): this is the main code of the patch that spoofs signatures based on metadata in the application manifest. Other cores that obtain fake signatures from different sources might follow up later; the need to modify an app's manifest to spoof its signature is not ideal in some situations. (See [patch](https://github.com/Lanchon/haystack/blob/master/patches-src/sigspoof-core/services.jar/GeneratePackageInfoHook.java).)
-- UI (optional): these patches add a global signature spoofing enable/disable switch to the application section in developer settings. Other UIs could be implemented in the future, such as a per-app setting using Android 6.0's runtime permissions, or a per-app setting for all semi-recent CyanogenMod roms using their Privacy Guard framework. (See [services.jar](https://github.com/Lanchon/haystack/blob/master/patches-src/sigspoof-ui-global-4.1-6.0/services.jar/GeneratePackageInfoHook.java) and [Settings.apk](https://github.com/Lanchon/haystack/blob/master/patches-src/sigspoof-ui-global-4.1-6.0/Settings.apk/DevelopmentSettings.java) patches.)
+- Hooks (required): these are simple adapters to hook all versions of Android from 1.5 Cupcake to 9.0 Pie. (See [patch source](https://github.com/Lanchon/haystack/tree/master/patches-src-gen/sigspoof-hook).)
+- Core (required): this is the main code of the patch that spoofs signatures based on metadata in the application manifest. Other cores that obtain fake signatures from different sources might follow up later; the need to modify an app's manifest to spoof its signature is not ideal in some situations. (See [patch source](https://github.com/Lanchon/haystack/tree/master/patches-src-gen/sigspoof-core).)
+- UI (optional): these patches add a global signature spoofing enable/disable switch to the application section in developer settings. Other UIs could be implemented in the future, such as a per-app setting using Android 6.0's runtime permissions, or a per-app setting for all semi-recent CyanogenMod roms using their Privacy Guard framework. (See [patch source](https://github.com/Lanchon/haystack/tree/master/patches-src-gen/sigspoof-ui-global).)
 
-Haystack is based on the concepts of filesets and patches. Filesets are groups of files that are typically pulled from a device to be operated upon (patched) and later pushed back to the same device. Patches are sets of DexPatcher patches applied as a single unit to one or more files of a fileset. Haystack includes bash scripts to apply [binary patches](https://github.com/Lanchon/haystack/tree/master/patches) that do most of the work for you:
+Haystack is based on the concepts of filesets and patches. Filesets are groups of files that are typically pulled from a device to be operated upon (patched) and later pushed back to the same device. Haystack patches are sets of DexPatcher patches applied as a single unit to one or more files of a fileset. Haystack includes bash scripts to apply [binary patches](https://github.com/Lanchon/haystack/tree/master/patches) that do most of the work for you:
 
 - `pull-fileset`: pulls a fileset from a device via adb.
 - `push-fileset`: pushes a fileset back to a device via adb.
 - `patch-fileset`: patches a fileset that resides on your PC.
 
-Additionally there are scripts to build patches [from source](https://github.com/Lanchon/haystack/tree/master/patches-src):
+Additionally there are scripts to build patches from source:
 
+- `patches-src-gen/generate-patch-sources`: generate [patch sources](https://github.com/Lanchon/haystack/tree/master/patches-src) for the various supported versions of Android from a [unified source tree](https://github.com/Lanchon/haystack/tree/master/patches-src-gen).
 - `build-patch`: compiles and packages a haystack patch (which might include several DexPatcher patches to be applied to several files of a fileset).
 - `dedex-fileset`: dedex a fileset (ie, process with **d2j-dex2jar**) ahead-of-time for improved build performance (otherwise, `build-patch` dedexes just-in-time).
 
 And finally there are script to bulk-build all patches:
 
-- `bulk-patch-builder\build-all`: build all haystack patches. For each haystack patch, build all its DexPatcher patches to check that they compile, and then dry-run apply the resulting binary patches to check that they apply cleanly. For each haystack patch, do these build and dry-run apply tests repeatedly against each framework version that the haystack patch supports. Finally, for each haystack patch, build and publish a binary patch against its canonical framework version.
-- `bulk-patch-builder\dedex-all`: ahead-of-time dedex for all reference Android frameworks.
+- `bulk-patch-builder/build-all`: generate patch sources and build all haystack patches. For each haystack patch, build all its DexPatcher patches to check that they compile, and then dry-run apply the resulting binary patches to check that they apply cleanly. For each haystack patch, do these build and dry-run apply tests repeatedly against each framework version that the haystack patch supports. Finally, for each haystack patch, build and publish a binary patch against its canonical framework version.
+- `bulk-patch-builder/dedex-all`: ahead-of-time dedex for all reference Android frameworks.
 
 The resulting log of the bulk-build process can be found [here](https://github.com/Lanchon/haystack/blob/master/patches/bulk-patch-builder.log). 
 
@@ -115,7 +116,10 @@ sigspoof-hook-1.5-2.3
 sigspoof-hook-4.0
 sigspoof-hook-4.1-6.0
 sigspoof-hook-7.0-9.0
-sigspoof-ui-global-4.1-6.0
+sigspoof-ui-global-4.0
+sigspoof-ui-global-4.1
+sigspoof-ui-global-4.2-5.0
+sigspoof-ui-global-5.1-6.0
 sigspoof-ui-global-7.0-7.1
 sigspoof-ui-global-8.0-8.1
 sigspoof-ui-global-9.0
@@ -164,23 +168,23 @@ deleting: classes.dex
 
 Finally, add the corresponding UI patch:
 
-`$ ./patch-fileset patches/sigspoof-ui-global-4.1-6.0/ 23 fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/`
+`$ ./patch-fileset patches/sigspoof-ui-global-5.1-6.0/ 23 fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/`
 ```
->>> target directory: fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0
+>>> target directory: fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0
 >>> apply patch: services.jar
->>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/services.jar/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar patches/sigspoof-ui-global-4.1-6.0/services.jar.dex
+>>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/tmp/services.jar/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar patches/sigspoof-ui-global-5.1-6.0/services.jar.dex
 info: read 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/services.jar'
-info: read 'patches/sigspoof-ui-global-4.1-6.0/services.jar.dex'
-info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/services.jar/patched-dex'
+info: read 'patches/sigspoof-ui-global-5.1-6.0/services.jar.dex'
+info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/tmp/services.jar/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: services.jar
 deleting: classes.dex
   adding: classes.dex (deflated 55%)
 >>> apply patch: Settings.apk
->>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/Settings.apk/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk patches/sigspoof-ui-global-4.1-6.0/Settings.apk.dex
+>>> dexpatcher --api-level 23 --verbose --output fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/tmp/Settings.apk/patched-dex --multi-dex fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk patches/sigspoof-ui-global-5.1-6.0/Settings.apk.dex
 info: read 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core/Settings.apk'
-info: read 'patches/sigspoof-ui-global-4.1-6.0/Settings.apk.dex'
-info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/tmp/Settings.apk/patched-dex'
+info: read 'patches/sigspoof-ui-global-5.1-6.0/Settings.apk.dex'
+info: write 'fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/tmp/Settings.apk/patched-dex'
 0 error(s), 0 warning(s)
 >>> repack: Settings.apk
 deleting: classes.dex
@@ -189,23 +193,23 @@ deleting: classes.dex
 *** patch-fileset: success
 ```
 
-The triple-patched fileset is now in `fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0`.
+The triple-patched fileset is now in `fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0`.
 
 Push it to the device:
 
-`$ ./push-fileset fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/`
+`$ ./push-fileset fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/`
 ```
 >>> adb root
 restarting adbd as root
 >>> adb remount
 remount succeeded
->>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/framework.jar /system/framework/
+>>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/framework.jar /system/framework/
 [100%] /system/framework/framework.jar
->>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/ext.jar /system/framework/
+>>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/ext.jar /system/framework/
 [100%] /system/framework/ext.jar
->>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/services.jar /system/framework/
+>>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/services.jar /system/framework/
 [100%] /system/framework/services.jar
->>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-4.1-6.0/Settings.apk /system/priv-app/Settings/
+>>> adb push fs-oneplus2__sigspoof-hook-4.1-6.0__sigspoof-core__sigspoof-ui-global-5.1-6.0/Settings.apk /system/priv-app/Settings/
 [100%] /system/priv-app/Settings/Settings.apk
 
 *** push-fileset: success
