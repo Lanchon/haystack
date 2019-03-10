@@ -53,17 +53,17 @@ Because of feature creep, Haystack is not as simple as the patch linked above. I
 
 Haystack is based on the concepts of filesets and patches. Filesets are groups of files that are typically pulled from a device to be operated upon (patched) and later pushed back to the same device. Haystack patches are sets of DexPatcher patches applied as a single unit to one or more files of a fileset. Haystack includes bash scripts to apply [binary patches](https://github.com/Lanchon/haystack/tree/master/patches) that do most of the work for you:
 
-- `pull-fileset`: pulls a fileset from a device via adb.
-- `push-fileset`: pushes a fileset back to a device via adb.
-- `patch-fileset`: patches a fileset that resides on your PC.
+- `pull-fileset`: pull a fileset from an Android device to your PC via adb.
+- `push-fileset`: push a fileset back to the device via adb.
+- `patch-fileset`: patch a fileset that resides on your PC.
 
 Additionally there are scripts to build patches from source:
 
 - `patches-src-gen/generate-patch-sources`: generate [patch sources](https://github.com/Lanchon/haystack/tree/master/patches-src) for the various supported versions of Android from a [unified source tree](https://github.com/Lanchon/haystack/tree/master/patches-src-gen).
-- `build-patch`: compiles and packages a haystack patch (which might include several DexPatcher patches to be applied to several files of a fileset).
+- `build-patch`: compile and package a haystack patch (which might include several DexPatcher patches to be applied to several files of a fileset).
 - `dedex-fileset`: dedex a fileset (ie, process with **d2j-dex2jar**) ahead-of-time for improved build performance (otherwise, `build-patch` dedexes just-in-time).
 
-And finally there are script to bulk-build all patches:
+And finally there are scripts to bulk-build all patches:
 
 - `bulk-patch-builder/build-all`: generate patch sources and build all haystack patches. For each haystack patch, build all its DexPatcher patches to check that they compile, and then dry-run apply the resulting binary patches to check that they apply cleanly. For each haystack patch, do these build and dry-run apply tests repeatedly against each framework version that the haystack patch supports. Finally, for each haystack patch, build and publish a binary patch against its canonical framework version.
 - `bulk-patch-builder/dedex-all`: ahead-of-time dedex for all reference Android frameworks.
@@ -224,4 +224,4 @@ Upon reboot, download and install my [signature spoofing checker](https://github
 
 `$ adb install lanchon.sigspoof.checker_2.apk`
 
-Launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Allow signature spoofing" (the last option), enable it, go back to the checker app... And profit!
+Launch the checker app and verify that signature spoofing is in fact disabled. Open up settings, go to developer settings (unlock the item if you need to), scroll to "Signature spoofing" (the last option), enable it, go back to the checker app... And profit!
