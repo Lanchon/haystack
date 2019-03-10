@@ -72,7 +72,7 @@ The resulting log of the bulk-build process can be found [here](https://github.c
 
 ### Ok, I said I wanted to try this thingy already!
 
-Let's run through an example patching of a OnePlus 2 running Android 6.0 (which is [API level 23](https://source.android.com/source/build-numbers)).
+Let's run through an example patching of a OnePlus 2 running Android 6.0.
 
 Connect the phone to your PC via USB and either:
 - Boot into TWRP, go to the `Mount` section, and mount the system partition.
@@ -105,7 +105,7 @@ adb: error: remote object '/system/framework/core-oj.jar' does not exist
 
 **IMPORTANT:** Make sure you keep a backup of the fileset you just pulled somewhere safe. You will need this backup to patch your device again or to restore it to its unpatched state. To do these things without a backup you will need to reinstall Android on your device.
 
-Patch the fileset with the required hook for Android 6.0:
+Patch the fileset with the required hook for Android 6.0 (which is [API level 23](https://source.android.com/source/build-numbers)):
 
 `$ ls patches`
 ```
