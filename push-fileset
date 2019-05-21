@@ -15,30 +15,34 @@ adb_options=( "${@:2}" )
 check_fileset "$fileset_dir"
 check_adb
 
+system_dir=$(find_system)
+
+echo ">>> system directory: $system_dir"
+
 run_adb root || true
 #run_adb wait-for-device
 run_adb remount || true
 
-run_adb push "$fileset_dir/framework.jar" "/system/framework/"
+run_adb push "$fileset_dir/framework.jar" "$system_dir/framework/"
 if [ -f "$fileset_dir/framework2.jar" ]; then
-    run_adb push "$fileset_dir/framework2.jar" "/system/framework/"
+    run_adb push "$fileset_dir/framework2.jar" "$system_dir/framework/"
 fi
 
 # TODO: Support the two versions of core jars that KK devices have.
 
 for file in "${fs_framework_jars[@]}"; do
-    run_adb push "$fileset_dir/$file" "/system/framework/"
+    run_adb push "$fileset_dir/$file" "$system_dir/framework/"
 done
 
 for file in "${fs_priv_apps[@]}"; do
-    run_adb push "$fileset_dir/$file" "/system/priv-app/${file%.apk}/" ||
-        run_adb push "$fileset_dir/$file" "/system/priv-app/" ||
-        run_adb push "$fileset_dir/$file" "/system/app/"
+    run_adb push "$fileset_dir/$file" "$system_dir/priv-app/${file%.apk}/" ||
+        run_adb push "$fileset_dir/$file" "$system_dir/priv-app/" ||
+        run_adb push "$fileset_dir/$file" "$system_dir/app/"
 done
 
 for file in "${fs_non_priv_apps[@]}"; do
-    run_adb push "$fileset_dir/$file" "/system/app/${file%.apk}/" ||
-        run_adb push "$fileset_dir/$file" "/system/app/"
+    run_adb push "$fileset_dir/$file" "$system_dir/app/${file%.apk}/" ||
+        run_adb push "$fileset_dir/$file" "$system_dir/app/"
 done
 
 echo
