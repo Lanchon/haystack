@@ -103,7 +103,7 @@ join_with_char() {
 }
 
 find_system() {
-    local out=$(run_adb_quiet shell ls /system/system)
+    local out=`adb exec-out ls /system/system`
     if echo "$out" | grep -q "No such file or directory"; then
         echo "/system"
     else
