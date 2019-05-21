@@ -14,32 +14,36 @@ adb_options=( "${@:2}" )
 
 check_adb
 
+system_dir=$(find_system)
+
 echo ">>> target directory: $fileset_dir"
 mkdir "$fileset_dir"
+echo ">>> system directory: $system_dir"
 
-run_adb pull "/system/framework/framework.jar" "$fileset_dir/"
-run_adb pull "/system/framework/framework2.jar" "$fileset_dir/" || true
+
+run_adb pull "$system_dir/framework/framework.jar" "$fileset_dir/"
+run_adb pull "$system_dir/framework/framework2.jar" "$fileset_dir/" || true
 
 # TODO: Support the two versions of core jars that KK devices have.
 
-run_adb pull "/system/framework/core.jar" "$fileset_dir/" ||
-    run_adb pull "/system/framework/core-libart.jar" "$fileset_dir/"
+run_adb pull "$system_dir/framework/core.jar" "$fileset_dir/" ||
+    run_adb pull "$system_dir/framework/core-libart.jar" "$fileset_dir/"
 
-run_adb pull "/system/framework/core-oj.jar" "$fileset_dir/" || true
+run_adb pull "$system_dir/framework/core-oj.jar" "$fileset_dir/" || true
 
 for file in "${fs_framework_jars[@]}"; do
-    run_adb pull "/system/framework/$file" "$fileset_dir/"
+    run_adb pull "$system_dir/framework/$file" "$fileset_dir/"
 done
 
 for file in "${fs_priv_apps[@]}"; do
-    run_adb pull "/system/priv-app/${file%.apk}/$file" "$fileset_dir/" ||
-        run_adb pull "/system/priv-app/$file" "$fileset_dir/" ||
-        run_adb pull "/system/app/$file" "$fileset_dir/"
+    run_adb pull "$system_dir/priv-app/${file%.apk}/$file" "$fileset_dir/" ||
+        run_adb pull "$system_dir/priv-app/$file" "$fileset_dir/" ||
+        run_adb pull "$system_dir/app/$file" "$fileset_dir/"
 done
 
 for file in "${fs_non_priv_apps[@]}"; do
-    run_adb pull "/system/app/${file%.apk}/$file" "$fileset_dir/" ||
-        run_adb pull "/system/app/$file" "$fileset_dir/"
+    run_adb pull "$system_dir/app/${file%.apk}/$file" "$fileset_dir/" ||
+        run_adb pull "$system_dir/app/$file" "$fileset_dir/"
 done
 
 echo
