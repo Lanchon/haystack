@@ -50,7 +50,7 @@ public class PackageManagerService /* extends IPackageManager.Stub */ {
             /*>4.0*/ //<4.1// pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, -1);
             /*>4.1*/ //<7.0// pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, userId);
             /*>7.0*/ PackageParser.Package pp = p.pkg;
-            /*>7.0*/ if (pp != null) pi = GeneratePackageInfoHook.hook(pi, mContext, pp, flags, userId, p);
+            /*>7.0*/ if (pp != null) pi = GeneratePackageInfoHook.hook(pi, mContext, pp, flags, userId);
             if ((flags & PackageManager.GET_PERMISSIONS) == 0) {
                 // maybe not necessary but let's keep API compatibile
                 pi.permissions = null;

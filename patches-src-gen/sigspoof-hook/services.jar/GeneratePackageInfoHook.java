@@ -25,13 +25,12 @@ package com.android.server.pm;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageParser;
-import com.android.server.pm.PackageSetting;
 
 import lanchon.dexpatcher.annotation.*;
 
 class GeneratePackageInfoHook {
 
-    static PackageInfo hook(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId, PackageSetting ps) {
+    static PackageInfo hook(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
         return pi;
     }
 
