@@ -42,7 +42,24 @@ class GeneratePackageInfoHook {
 
     @DexAdd
     private static boolean getPerAppEnable(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
-        return true;
+        // MAYBE FIXME: at least Android 4.1 required (for requestedPermissionsFlags)
+        if (pi.requestedPermissions==null || pi.requestedPermissionsFlags==null) {
+            return false;
+        }
+        if (pi.requestedPermissions.length != pi.requestedPermissionsFlags.length) {
+            Log.e("GeneratePackageInfoHook", "pi.requestedPermissions.length != pi.requestedPermissionsFlags.length");
+            return false;
+        }
+        for (int i=0; i<pi.requestedPermissions.length; i++) {
+            if (pi.requestedPermissions[i].equals(FakeSignatureCore.PERMISSION)) {
+                boolean r = ( (pi.requestedPermissionsFlags[i] & PackageInfo.REQUESTED_PERMISSION_GRANTED) != 0 );
+                if (!r) {
+                    Log.w("GeneratePackageInfoHook", "user didn't grant FAKE_PACKAGE_SIGNATURE permission");
+                }
+                return r;
+            }
+        }
+        return false;
     }
 
     @DexAdd
@@ -54,28 +71,22 @@ class GeneratePackageInfoHook {
     static PackageInfo hook(PackageInfo pi, Context context, PackageParser.Package p, int flags, int userId) {
         try {
             if ((flags & PackageManager.GET_SIGNATURES) != 0) {
-                if (p.requestedPermissions != null) {
-                    if (p.requestedPermissions.contains(FakeSignatureCore.PERMISSION)) {
-                        if (getGlobalEnable(pi, context, p, flags, userId) &&
-                                getPerAppEnable(pi, context, p, flags, userId)) {
-                            if (p.mAppMetaData != null) {
-                                Object fakeSignatureData = p.mAppMetaData.get(FakeSignatureCore.METADATA);
-                                if (fakeSignatureData != null) {
-                                    if (fakeSignatureData instanceof String) {
-                                        pi.signatures = new Signature[] { new Signature((String) fakeSignatureData) };
-                                    } else {
-                                        Log.e("GeneratePackageInfoHook", "invalid '" + FakeSignatureCore.METADATA + "' metadata");
-                                    }
-                                } else {
-                                    Log.e("GeneratePackageInfoHook", "missing 'fake-signature' metadata");
-                                }
+                if (getGlobalEnable(pi, context, p, flags, userId) &&
+                        getPerAppEnable(pi, context, p, flags, userId)) {
+                    if (p.mAppMetaData != null) {
+                        Object fakeSignatureData = p.mAppMetaData.get(FakeSignatureCore.METADATA);
+                        if (fakeSignatureData != null) {
+                            if (fakeSignatureData instanceof String) {
+                                pi.signatures = new Signature[] { new Signature((String) fakeSignatureData) };
                             } else {
-                                Log.e("GeneratePackageInfoHook", "null mAppMetaData");
+                                Log.e("GeneratePackageInfoHook", "invalid '" + FakeSignatureCore.METADATA + "' metadata");
                             }
+                        } else {
+                            Log.e("GeneratePackageInfoHook", "missing 'fake-signature' metadata");
                         }
+                    } else {
+                        Log.e("GeneratePackageInfoHook", "null mAppMetaData");
                     }
-                } else {
-                    Log.e("GeneratePackageInfoHook", "null requestedPermissions");
                 }
             }
         } catch (Throwable t) {

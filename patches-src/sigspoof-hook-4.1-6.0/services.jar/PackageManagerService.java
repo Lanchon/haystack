@@ -26,6 +26,7 @@
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageParser;
+import android.content.pm.PackageManager;
 
 //<4.0// import com.android.server.pm.GeneratePackageInfoHookAccessor;
 
@@ -43,13 +44,19 @@ public class PackageManagerService /* extends IPackageManager.Stub */ {
     /*>4.1*/ /*<7.0*/ PackageInfo generatePackageInfo(PackageParser.Package p, int flags, int userId) {
     //>7.0// private PackageInfo generatePackageInfo(PackageSetting p, int flags, int userId) {
         //<4.1// PackageInfo pi = generatePackageInfo(p, flags);
-        /*>4.1*/ PackageInfo pi = generatePackageInfo(p, flags, userId);
+        /*>4.1*/ PackageInfo pi = generatePackageInfo(p, flags | PackageManager.GET_PERMISSIONS, userId);
         if (p != null && pi != null) {
             //<4.0// pi = GeneratePackageInfoHookAccessor.hook(pi, mContext, p, flags, -1);
             /*>4.0*/ //<4.1// pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, -1);
             /*>4.1*/ /*<7.0*/ pi = GeneratePackageInfoHook.hook(pi, mContext, p, flags, userId);
             //>7.0// PackageParser.Package pp = p.pkg;
             //>7.0// if (pp != null) pi = GeneratePackageInfoHook.hook(pi, mContext, pp, flags, userId);
+            if ((flags & PackageManager.GET_PERMISSIONS) == 0) {
+                // maybe not necessary but let's keep API compatibile
+                pi.permissions = null;
+                pi.requestedPermissions = null;
+                pi.requestedPermissionsFlags = null;
+            }
         }
         return pi;
     }
