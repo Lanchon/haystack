@@ -35,7 +35,7 @@ if $wet_run; then
     echo ">>> target directory: $patched_filterset_dir"
     mkdir "$patched_filterset_dir"
 
-    cp -t "$patched_filterset_dir" "$fileset_dir"/*.{jar,apk}
+    cp "$fileset_dir"/*.{jar,apk} "$patched_filterset_dir"
 
     tmp_dir="$patched_filterset_dir/tmp"
     mkdir "$tmp_dir"
